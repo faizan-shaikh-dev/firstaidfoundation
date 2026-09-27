@@ -12,39 +12,50 @@ const iconMap = {
 function CountUpNumber({ targetValue, suffix }) {
   const [count, setCount] = useState(0);
   const elementRef = useRef(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
+    let animationFrameId;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          let start = 0;
-          const duration = 1500;
-          const stepTime = 30;
-          const steps = Math.ceil(duration / stepTime);
-          const increment = targetValue / steps;
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          const startTime = performance.now();
+          const duration = 1200; // 1.2 seconds
 
-          const timer = setInterval(() => {
-            start += increment;
-            if (start >= targetValue) {
-              setCount(targetValue);
-              clearInterval(timer);
+          const animate = (currentTime) => {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            
+            // Ease out quad formula for smooth decelerating count
+            const easedProgress = 1 - (1 - progress) * (1 - progress);
+            const currentCount = Math.floor(easedProgress * targetValue);
+
+            setCount(currentCount);
+
+            if (progress < 1) {
+              animationFrameId = requestAnimationFrame(animate);
             } else {
-              setCount(Math.floor(start));
+              setCount(targetValue);
             }
-          }, stepTime);
+          };
+
+          animationFrameId = requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
-  }, [targetValue, hasAnimated]);
+    return () => {
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      observer.disconnect();
+    };
+  }, [targetValue]);
 
   return (
     <span ref={elementRef} className="font-extrabold text-3xl sm:text-5xl lg:text-6xl text-[#184E82] tracking-tight block">
