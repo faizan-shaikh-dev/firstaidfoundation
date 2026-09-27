@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #184E82;
+  --color-blue-dark: #0F3356;
+  --color-blue-light: #EBF3FA;
+  
+  --color-primary-red: #EB1F23;
+  --color-red-dark: #B91417;
+  --color-red-light: #FDF2F2;
+
+  --color-dark-gray: #5F5F5F;
+  --color-gray-dark: #334155;
+  --color-gray-light: #F8FAFC;
+  --color-gray-border: #E2E8F0;
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: #334155;
+  background-color: #FFFFFF;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Utilities & Animations */
+.bg-brand-blue {
+  background-color: #184E82;
+}
+
+.bg-brand-red {
+  background-color: #EB1F23;
+}
+
+.text-brand-blue {
+  color: #184E82;
+}
+
+.text-brand-red {
+  color: #EB1F23;
+}
+
+.border-brand-blue {
+  border-color: #184E82;
+}
+
+.border-brand-red {
+  border-color: #EB1F23;
+}
+
+/* Glass & Card styles */
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(24, 78, 130, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(24, 78, 130, 0.15), 0 10px 20px -5px rgba(235, 31, 35, 0.08);
+}
