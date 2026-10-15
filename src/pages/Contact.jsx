@@ -11,11 +11,12 @@ export default function Contact() {
   return (
     <div className="space-y-0">
       
-      {/* Page Hero */}
+      {/* Page Hero with AI Banner */}
       <PageHero
         title={contactData.heading}
         subtitle={contactData.subheading}
         badge="Reach Out to Us"
+        bgImage="/images/cancer-patient-care.jpg"
       />
 
       {/* Main Contact Section */}
@@ -103,6 +104,25 @@ export default function Contact() {
                   >
                     <YoutubeIcon className="w-4 h-4" />
                   </a>
+                </div>
+              </div>
+
+              {/* Official Office Photo Card */}
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-soft overflow-hidden">
+                <div className="h-56 overflow-hidden relative group">
+                  <img
+                    src="/images/img23.jpeg"
+                    alt="First Aid Foundation Registered Office in Jalgaon"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/40 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <span className="text-[10px] font-bold uppercase bg-[#EB1F23] px-2.5 py-0.5 rounded text-white inline-block mb-1">
+                      Registered Office
+                    </span>
+                    <h5 className="font-bold text-sm">Mehrun, Jalgaon (Maharashtra)</h5>
+                    <p className="text-[11px] text-blue-100">President: Shakil Ahmed (Shakeel Hannan)</p>
+                  </div>
                 </div>
               </div>
 

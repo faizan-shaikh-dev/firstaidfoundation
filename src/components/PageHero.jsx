@@ -6,15 +6,29 @@ export default function PageHero({
   title,
   subtitle,
   badge = 'First Aid Foundation',
-  showDonate = true
+  showDonate = true,
+  bgImage
 }) {
   return (
-    <section className="relative bg-gradient-to-br from-[#0F3356] via-[#184E82] to-[#0A2540] text-white py-16 md:py-20 overflow-hidden">
+    <section className="relative bg-[#0F3356] text-white py-16 md:py-24 overflow-hidden">
       
+      {/* Background Hero Banner Image with Cinematic Overlay */}
+      {bgImage && (
+        <div className="absolute inset-0 z-0">
+          <img
+            src={bgImage}
+            alt={title}
+            className="w-full h-full object-cover object-center filter brightness-[0.28] contrast-110 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0F3356]/80 to-[#0A2540]/90" />
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+        </div>
+      )}
+
       {/* Background Decorative Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none z-0" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none z-0" />
+
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {badge && (

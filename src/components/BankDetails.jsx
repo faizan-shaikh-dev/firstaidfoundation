@@ -111,9 +111,16 @@ export default function BankDetails() {
       </div>
 
       {/* Footer Trust Info */}
-      <div className="flex items-center gap-2 text-xs text-[#5F5F5F] pt-4 border-t border-slate-100">
-        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-        <span>Official verified bank account of First Aid Foundation. Tax exempt receipt provided upon request.</span>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#5F5F5F] pt-4 border-t border-slate-100">
+        <div className="flex items-center gap-2">
+          <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+          <span>Official verified bank account of First Aid Foundation.</span>
+        </div>
+        {bankDetailsData.verificationNotice && (
+          <span className="font-semibold text-[#184E82]">
+            {bankDetailsData.verificationNotice}
+          </span>
+        )}
       </div>
 
     </div>

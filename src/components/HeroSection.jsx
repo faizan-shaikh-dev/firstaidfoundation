@@ -6,6 +6,16 @@ export default function HeroSection() {
   return (
     <section className="relative bg-gradient-to-b from-slate-50 via-white to-blue-50/30 pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
       
+      {/* Decorative ambient background with subtle AI medical banner watermark */}
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <img
+          src="/images/doctor-consultation-care.jpg"
+          alt=""
+          className="w-full h-full object-cover object-top opacity-[0.07] filter grayscale blur-xs scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white/85 to-blue-50/50" />
+      </div>
+
       {/* Decorative ambient background elements */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-r from-blue-100/40 via-red-50/30 to-blue-50/50 blur-3xl pointer-events-none -z-10" />
 
@@ -97,21 +107,29 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                {/* Visual Medical / Shelter Graphic Card */}
-                <div className="relative bg-gradient-to-br from-[#184E82] to-[#0F3356] rounded-2xl p-6 text-white overflow-hidden shadow-inner mb-6">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full blur-2xl pointer-events-none" />
+                {/* Visual Medical Patient Care Image Card */}
+                <div className="relative rounded-2xl overflow-hidden shadow-lg mb-6 group h-64">
+                  <img 
+                    src="/images/doctor-consultation-care.jpg" 
+                    alt="Doctor bedside consultation and compassionate patient care" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/50 to-transparent" />
                   
-                  <div className="relative z-10 space-y-3">
-                    <div className="inline-block px-3 py-1 rounded-md bg-red-600/90 text-white text-xs font-bold uppercase tracking-wide">
-                      Flagship Initiative
-                    </div>
-                    <h4 className="text-xl font-bold text-white">Khandesh House Free Shelter</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
-                      Providing free stay, meals, and dignity for families visiting Mumbai for crucial treatments at major government hospitals.
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="inline-block px-3 py-1 rounded-md bg-red-600/90 text-white text-xs font-bold uppercase tracking-wide shadow-sm">
+                      On-Ground Relief
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 right-3 z-10 text-white space-y-1">
+                    <h4 className="text-lg font-bold text-white leading-snug">Bedside Patient Relief & Guidance</h4>
+                    <p className="text-xs text-blue-100 leading-tight">
+                      Direct medical aid, chemotherapy support, and shelter at Mumbai government hospitals.
                     </p>
-                    <div className="pt-2 flex items-center justify-between text-xs text-slate-200 border-t border-blue-700/50">
-                      <span>Target Facility: 15 Beds</span>
-                      <span className="font-bold text-white">Mumbai, MS</span>
+                    <div className="pt-2 flex items-center justify-between text-[11px] text-slate-200 border-t border-white/20">
+                      <span className="font-semibold text-white">JJ Hospital • Tata Memorial</span>
+                      <span className="font-bold text-red-300">100% Free Aid</span>
                     </div>
                   </div>
                 </div>

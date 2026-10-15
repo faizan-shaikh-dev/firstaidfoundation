@@ -5,6 +5,7 @@ export const featuredInitiatives = [
     tagline: 'A Home Away From Home in Mumbai',
     description: 'Building a dedicated stay facility in the heart of Mumbai for families visiting the city to receive crucial medical treatments at major government hospitals.',
     imagePlaceholder: 'shelter',
+    image: '/images/khandesh-shelter.jpg',
     badge: 'Flagship Project'
   },
   {
@@ -13,6 +14,7 @@ export const featuredInitiatives = [
     tagline: 'Environmental & Public Health Initiative',
     description: 'An initiative under the National Clean Air Programme and Majhi Vasundhara 4.0, working towards a cleaner, greener, and healthier environment for future generations.',
     imagePlaceholder: 'treebank',
+    image: '/images/tree-bank-clean-air.jpg',
     badge: 'Clean Air Initiative'
   },
   {
@@ -21,6 +23,7 @@ export const featuredInitiatives = [
     tagline: 'Healthcare Support Where It Is Needed Most',
     description: 'Providing essential medical services, direct support, and healthcare awareness through strategic hospital collaborations, community outreach, and impactful interventions.',
     imagePlaceholder: 'medical',
+    image: '/images/medicine-nutrition-aid.jpg',
     badge: 'Healthcare Outreach'
   }
 ];

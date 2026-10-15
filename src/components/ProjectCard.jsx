@@ -8,15 +8,20 @@ export default function ProjectCard({ detailed = false }) {
     <div className="bg-white rounded-3xl overflow-hidden shadow-soft border border-slate-100 shadow-hover">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         
-        {/* Left Visual Banner */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-[#184E82] via-[#0F3356] to-slate-900 p-6 sm:p-8 lg:p-10 text-white flex flex-col justify-between relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Left Visual Banner with Real Shelter Photo */}
+        <div className="lg:col-span-5 relative p-6 sm:p-8 lg:p-10 text-white flex flex-col justify-between overflow-hidden group">
+          <img 
+            src="/images/khandesh-shelter.jpg" 
+            alt="Khandesh House Shelter Dormitory for Hospital Patients and Families" 
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-[#184E82]/85 to-slate-900/70" />
           
-          <div>
-            <span className="inline-block px-3 py-1 bg-[#EB1F23] text-white text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+          <div className="relative z-10">
+            <span className="inline-block px-3 py-1 bg-[#EB1F23] text-white text-xs font-bold uppercase tracking-wider rounded-full mb-4 shadow-sm">
               Featured Flagship Project
             </span>
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-2">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-2 leading-tight">
               {khandeshHouseData.title}
             </h3>
             <p className="text-xs sm:text-sm font-bold text-red-300 mb-4 sm:mb-6">
@@ -28,7 +33,7 @@ export default function ProjectCard({ detailed = false }) {
           </div>
 
           {/* Cost Badge Box */}
-          <div className="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/15 mt-4 sm:mt-6">
+          <div className="relative z-10 bg-black/40 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/20 mt-4 sm:mt-6 shadow-lg">
             <span className="text-xs text-slate-300 font-medium uppercase tracking-wider block">
               Estimated Total Project Cost
             </span>

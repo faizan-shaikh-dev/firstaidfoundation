@@ -14,24 +14,31 @@ export default function InitiativeCard({ initiative }) {
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-soft border border-slate-100 shadow-hover flex flex-col h-full group">
       
-      {/* Banner / Visual Placeholder */}
-      <div className="relative bg-gradient-to-br from-[#184E82] via-[#0F3356] to-slate-900 p-8 text-white min-h-[200px] flex flex-col justify-between overflow-hidden">
-        <div className="absolute top-0 right-0 w-40 h-40 bg-red-500/10 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform" />
+      {/* Banner / Visual Card with Image */}
+      <div className="relative h-60 text-white flex flex-col justify-between overflow-hidden">
+        {initiative.image ? (
+          <img 
+            src={initiative.image} 
+            alt={initiative.title} 
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+        ) : null}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-900/30" />
         
-        <div className="flex items-center justify-between relative z-10">
-          <span className="bg-[#EB1F23] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+        <div className="flex items-center justify-between relative z-10 p-6 pb-0">
+          <span className="bg-[#EB1F23] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
             {initiative.badge}
           </span>
-          <div className="p-3 bg-white/10 rounded-xl backdrop-blur-sm text-white">
-            <IconComp className="w-6 h-6" />
+          <div className="p-2.5 bg-black/40 backdrop-blur-md rounded-xl text-white border border-white/20">
+            <IconComp className="w-5 h-5" />
           </div>
         </div>
 
-        <div className="relative z-10 pt-6">
-          <span className="text-xs text-blue-200 font-medium uppercase tracking-wider block mb-1">
+        <div className="relative z-10 p-6 pt-0">
+          <span className="text-xs text-red-300 font-semibold uppercase tracking-wider block mb-1 drop-shadow-sm">
             {initiative.tagline}
           </span>
-          <h3 className="text-2xl font-extrabold text-white group-hover:text-red-300 transition-colors leading-tight">
+          <h3 className="text-xl font-extrabold text-white group-hover:text-red-200 transition-colors leading-tight drop-shadow-sm">
             {initiative.title}
           </h3>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, QrCode, ShieldAlert, Sparkles } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import Button from './Button';
+import QRDonation from './QRDonation';
 
 export default function SadaqahSection() {
   return (
@@ -55,34 +56,9 @@ export default function SadaqahSection() {
             </div>
           </div>
 
-          {/* QR Donation Widget Placeholder */}
+          {/* QR Donation Widget */}
           <div className="lg:col-span-5">
-            <div className="bg-gradient-to-br from-[#184E82] to-[#0F3356] rounded-3xl p-8 text-white text-center shadow-xl relative overflow-hidden border border-blue-800">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full blur-2xl pointer-events-none" />
-              
-              <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-md text-red-300">
-                <QrCode className="w-6 h-6" />
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2">Scan & Donate via UPI</h3>
-              <p className="text-xs text-blue-200 mb-6">
-                Official First Aid Foundation UPI QR Code
-              </p>
-
-              {/* QR Code Container Placeholder */}
-              <div className="bg-white p-6 rounded-2xl max-w-[220px] mx-auto shadow-inner text-slate-700 mb-6 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center min-h-[200px]">
-                <QrCode className="w-20 h-20 text-slate-400 mb-2" />
-                <span className="text-xs font-bold text-[#184E82]">Donation QR Code</span>
-                <span className="text-[10px] text-[#5F5F5F] text-center mt-1">
-                  Scan with GPay, PhonePe, Paytm or BHIM
-                </span>
-              </div>
-
-              <div className="bg-white/10 p-3 rounded-xl backdrop-blur-xs text-xs text-blue-100 flex items-center justify-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-red-300" />
-                <span>Verified Foundation Account</span>
-              </div>
-            </div>
+            <QRDonation />
           </div>
 
         </div>

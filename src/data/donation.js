@@ -1,10 +1,10 @@
 export const bankDetailsData = {
   accountName: 'First Aid Foundation',
   accountNumber: '50200018098095',
-  ifscCode: 'HDFC000180',
+  ifscCode: 'HDFC0000180',
   bankName: 'HDFC Bank',
   branch: 'Jalgaon Branch',
-  verificationNotice: ''
+  verificationNotice: 'Reg. No. F-16650/Jal (Bombay Public Trust Act-1950)'
 };
 
 export const donationContent = {

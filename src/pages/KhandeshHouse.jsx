@@ -12,11 +12,12 @@ export default function KhandeshHouse() {
   return (
     <div className="space-y-0">
       
-      {/* Page Hero Banner */}
+      {/* Page Hero Banner with AI Banner */}
       <PageHero
         title={`${khandeshHouseData.title} — Free Shelter Project`}
         subtitle="Creating a safe, hygienic, and dignified stay facility in Mumbai for patient families visiting government hospitals."
         badge="Flagship Infrastructure Project"
+        bgImage="/images/khandesh-shelter.jpg"
       />
 
       {/* Main Specs Section */}
@@ -51,6 +52,24 @@ export default function KhandeshHouse() {
               <p className="font-semibold text-[#184E82]">
                 Khandesh House will directly solve this humanitarian challenge by offering a clean, safe, and supportive home environment.
               </p>
+            </div>
+
+            {/* Interior Shelter Showcase Image */}
+            <div className="rounded-2xl overflow-hidden shadow-md relative h-64 sm:h-80 group">
+              <img 
+                src="/images/khandesh-shelter.jpg" 
+                alt="Inside Khandesh House Shelter Accommodation in Mumbai" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="text-xs font-bold uppercase tracking-wider bg-red-600/90 px-2.5 py-1 rounded-full shadow-sm">
+                  Dignified Refuge
+                </span>
+                <p className="text-sm font-semibold mt-1.5">
+                  Clean beds, hygienic restrooms, and community dining for hospital patient families
+                </p>
+              </div>
             </div>
 
             {/* Infrastructure Highlights */}

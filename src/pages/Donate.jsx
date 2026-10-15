@@ -11,12 +11,13 @@ export default function Donate() {
   return (
     <div className="space-y-0">
       
-      {/* Page Hero */}
+      {/* Page Hero with AI Banner */}
       <PageHero
         title={donationContent.title}
         subtitle={donationContent.subtitle}
         badge="Direct Medical Relief Fund"
         showDonate={false}
+        bgImage="/images/medicine-nutrition-aid.jpg"
       />
 
       {/* Cause Overview */}
