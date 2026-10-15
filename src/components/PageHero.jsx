@@ -10,49 +10,44 @@ export default function PageHero({
   bgImage
 }) {
   return (
-    <section className="relative bg-[#0F3356] text-white py-16 md:py-24 overflow-hidden">
+    <section className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden min-h-[420px] md:min-h-[500px] flex items-center justify-center">
       
-      {/* Background Hero Banner Image with Cinematic Overlay */}
+      {/* Background Hero Banner Image - Clear, Bright & Fully Visible */}
       {bgImage && (
         <div className="absolute inset-0 z-0">
           <img
             src={bgImage}
             alt={title}
-            className="w-full h-full object-cover object-center filter brightness-[0.28] contrast-110 scale-105"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0F3356]/80 to-[#0A2540]/90" />
-          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+          {/* Subtle balanced overlay to keep the photo bright & clear while ensuring text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/30 to-slate-950/45" />
         </div>
       )}
 
-      {/* Background Decorative Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none z-0" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none z-0" />
-
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {badge && (
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 mb-6 backdrop-blur-sm shadow-xs">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-black/50 text-white border border-white/30 mb-6 backdrop-blur-md shadow-lg">
             <span className="w-2 h-2 rounded-full bg-[#EB1F23]"></span>
             {badge}
           </div>
         )}
 
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           {title}
         </h1>
 
-        <div className="h-1.5 w-24 bg-[#EB1F23] rounded-full mx-auto mb-6" />
+        <div className="h-1.5 w-24 bg-[#EB1F23] rounded-full mx-auto mb-6 shadow-md" />
 
         {subtitle && (
-          <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-slate-100 max-w-3xl mx-auto font-normal leading-relaxed mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {subtitle}
           </p>
         )}
 
         {showDonate && (
           <div className="pt-2">
-            <Button to="/donate" variant="primary" size="lg" icon={Heart}>
+            <Button to="/donate" variant="primary" size="lg" icon={Heart} className="shadow-2xl shadow-red-600/40">
               Take My Contribution
             </Button>
           </div>
