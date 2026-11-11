@@ -1,209 +1,292 @@
-import React from 'react';
-import PageHero from '../components/PageHero';
-import SectionHeading from '../components/SectionHeading';
-import TeamCard from '../components/TeamCard';
-import Button from '../components/Button';
-import { teamDescription, teamMembersData, presidentProfile } from '../data/team';
-import { Heart, Users, ShieldCheck, Phone, Mail, Award, CheckCircle2, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  Users,
+  ShieldCheck,
+  Phone,
+  Mail,
+  Heart,
+  CheckCircle2,
+  Sparkles,
+  UserCheck,
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import { presidentProfile, teamMembersData, teamDescription } from '../data/team';
 
 export default function Team() {
+  const trustees = teamMembersData.filter((m) => m.id !== 1);
+
+  const committeeMembers = [
+    {
+      id: 'vol-1',
+      name: 'Mumbai Hospital Patient Intake Coordinator',
+      role: 'Hospital Operations Liaison',
+      focus: 'Bedside intake at Sir J.J. Hospital, Tata Memorial & KEM Hospital',
+      location: 'Mumbai Corridor',
+    },
+    {
+      id: 'vol-2',
+      name: 'Khandesh House Shelter Supervisor',
+      role: 'Shelter & Logistics Coordinator',
+      focus: 'Patient family bed allotment, sanitation supervision & daily nutrition',
+      location: 'Mumbai Shelter',
+    },
+    {
+      id: 'vol-3',
+      name: 'District Medicine Aid Coordinator',
+      role: 'Pharmaceutical Aid Liaison',
+      focus: 'Distributing critical medicines across Jalgaon, Nagpur & Aurangabad',
+      location: 'Jalgaon HQ',
+    },
+    {
+      id: 'vol-4',
+      name: 'Environmental Clean Air Project Lead',
+      role: 'Tree Bank Community Lead',
+      focus: 'Driving tree sapling drives under NCAP & Majhi Vasundhara 4.0',
+      location: 'Maharashtra Region',
+    },
+  ];
+
   return (
     <div className="space-y-0">
-      
-      {/* Page Hero with AI Banner */}
-      <PageHero
-        title="Leadership & Dedicated Team"
-        subtitle={teamDescription.paragraphs[0]}
-        badge="First Aid Foundation Leadership"
-        bgImage="/images/tree-bank-clean-air.jpg"
+      <SEOHead
+        title="Our Team — Leadership, Trustees & Healthcare Coordinators"
+        description="Meet the dedicated leadership of First Aid Foundation led by Founder & President Shakil Ahmed (Shakeel Hannan), alongside our Board of Trustees and grassroots hospital coordinators across Jalgaon and Mumbai."
+        canonicalPath="/team"
       />
 
-      {/* FOUNDER & PRESIDENT SPOTLIGHT */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="bg-gradient-to-br from-slate-900 via-[#0F3356] to-[#184E82] rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-blue-900">
-            
-            {/* Ambient background glows */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Page Hero */}
+      <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
+        <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl space-y-5">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+              <Users className="w-3.5 h-3.5 text-coral-400" />
+              <span>Dedicated Leadership & Trust Governance</span>
+            </span>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              {teamDescription.headline}
+            </h1>
+            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+              {teamDescription.paragraphs[0]}
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+      {/* 1. Founder & President Spotlight Card */}
+      <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12 space-y-3">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
+              <Sparkles className="w-3.5 h-3.5 text-coral-600" />
+              <span>Founding Vision</span>
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+              Foundation President
+            </h2>
+          </div>
+
+          <div className="bg-ivory rounded-3xl p-8 sm:p-12 border border-ivory-border shadow-editorial-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
-              {/* Leader Photo Column */}
-              <div className="lg:col-span-5 flex flex-col items-center">
-                <div className="relative group">
-                  <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl group-hover:border-red-500 transition-all duration-300">
-                    <img 
-                      src={presidentProfile.image} 
+              <div className="lg:col-span-4 flex justify-center">
+                <div className="relative">
+                  <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-forest-950">
+                    <img
+                      src={presidentProfile.image}
                       alt={presidentProfile.name}
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
-                  <div className="absolute -bottom-4 bg-[#EB1F23] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                  <span className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 bg-coral-600 text-white px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-md flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Founder & President</span>
-                  </div>
-                </div>
-
-                <div className="mt-8 text-center space-y-2">
-                  <h3 className="text-2xl font-extrabold text-white">{presidentProfile.name}</h3>
-                  <p className="text-sm font-semibold text-red-300">{presidentProfile.title} — {presidentProfile.organization}</p>
-                  
-                  <div className="pt-2 flex flex-wrap justify-center gap-3 text-xs">
-                    <a 
-                      href={`tel:${presidentProfile.phone.replace(/[^0-9+]/g, '')}`}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium border border-white/20 transition-colors"
-                    >
-                      <Phone className="w-3.5 h-3.5 text-red-400" />
-                      <span>{presidentProfile.phone}</span>
-                    </a>
-                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 text-slate-200 font-medium border border-white/20">
-                      <MapPin className="w-3.5 h-3.5 text-blue-300" />
-                      <span>{presidentProfile.location}</span>
-                    </span>
-                  </div>
+                  </span>
                 </div>
               </div>
 
-              {/* Leader Vision & Bio Column */}
-              <div className="lg:col-span-7 space-y-6">
-                
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 text-xs font-bold uppercase tracking-wider">
-                  <Award className="w-4 h-4" />
-                  <span>Founding Visionary</span>
+              <div className="lg:col-span-8 space-y-5">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-teal-800 block">
+                    Chief Humanitarian Officer & Founder
+                  </span>
+                  <h3 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mt-1">
+                    {presidentProfile.name}
+                  </h3>
+                  <span className="text-xs text-navy-600 font-semibold block mt-1">
+                    {presidentProfile.location} • Reg. No. F-16650/Jal
+                  </span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-                  Leading with Empathy, Action & Devotion
-                </h2>
-
-                <blockquote className="border-l-4 border-[#EB1F23] pl-4 italic text-base sm:text-lg text-slate-200 leading-relaxed bg-white/5 py-3 pr-4 rounded-r-xl">
+                <blockquote className="p-4 rounded-2xl bg-white border-l-4 border-coral-600 shadow-2xs font-serif italic text-navy-800 text-base leading-relaxed">
                   "{presidentProfile.quote}"
                 </blockquote>
 
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                  Under the dedicated leadership of Shakil Ahmed (Shakeel Hannan), First Aid Foundation has grown from a localized humanitarian effort in Jalgaon into an essential lifeline for hundreds of patients traveling to Mumbai for major surgeries, cancer therapy, and critical treatments.
-                </p>
+                <div className="space-y-2 pt-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-forest-900 block">
+                    Key Leadership Contributions:
+                  </span>
+                  {presidentProfile.achievements.map((ach, idx) => (
+                    <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-navy-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{ach}</span>
+                    </div>
+                  ))}
+                </div>
 
-                {/* Key Achievements */}
-                <div className="space-y-2.5 pt-2">
-                  <h4 className="text-xs font-bold text-red-300 uppercase tracking-wider">Key Pillars of Action</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-200">
-                    {presidentProfile.achievements.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2 bg-white/5 p-2.5 rounded-xl border border-white/10">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                <div className="pt-4 border-t border-ivory-border flex flex-wrap items-center gap-4 text-xs font-semibold">
+                  <a
+                    href={`tel:${presidentProfile.phone.replace(/[^0-9+]/g, '')}`}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white transition-colors shadow-coral-glow"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Direct Helpline: {presidentProfile.phone}</span>
+                  </a>
+                  <a
+                    href={`mailto:${presidentProfile.email}`}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-navy-900 border border-ivory-border hover:bg-ivory-warm transition-colors"
+                  >
+                    <Mail className="w-4 h-4 text-coral-600" />
+                    <span>{presidentProfile.email}</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Board of Trustees */}
+      <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14 space-y-3">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
+              <ShieldCheck className="w-3.5 h-3.5 text-coral-600" />
+              <span>Trust Governance</span>
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+              Board of Trustees & Operations Leads
+            </h2>
+            <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+              Our trustees supervise hospital admissions, relief fund distributions, and medicine procurement to maintain zero administrative leakage.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustees.map((member) => (
+              <div
+                key={member.id}
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
+              >
+                <div className="space-y-4">
+                  <div className="w-14 h-14 rounded-2xl bg-forest-50 border border-forest-200 text-forest-800 flex items-center justify-center font-serif text-xl font-bold">
+                    {member.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-coral-600 bg-coral-50 px-2 py-0.5 rounded-full inline-block mb-1.5 border border-coral-200">
+                      {member.badge}
+                    </span>
+                    <h3 className="font-serif text-xl font-bold text-navy-900">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-semibold text-teal-800 mt-0.5">
+                      {member.designation}
+                    </p>
                   </div>
                 </div>
 
+                <div className="pt-5 mt-6 border-t border-ivory-border">
+                  <a
+                    href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-forest-900 hover:text-coral-600 transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-coral-600" />
+                    <span>{member.phone}</span>
+                  </a>
+                </div>
               </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* Board of Trustees Grid */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <SectionHeading
-            badge="Trustees & Coordinators"
-            title="Board of Trustees & Operations Team"
-            subtitle="Working tirelessly on the ground to assist admitted patients, verify genuine cases, and distribute relief."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {teamMembersData.map((member) => (
-              <TeamCard key={member.id} member={member} />
             ))}
           </div>
-
-          <div className="mt-16 text-center">
-            <Button to="/donate" variant="primary" size="lg" icon={Heart}>
-              Support Our Medical Team
-            </Button>
-          </div>
-
         </div>
       </section>
 
-      {/* Ground Leadership in Action Visuals */}
-      <section className="py-20 bg-white">
+      {/* 3. Operational & Field Committee */}
+      <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Leadership In Action"
-            title="Field Work & Public Forums"
-            subtitle="Authentic moments of our leadership engaging with hospitals, conferences, and community welfare programs."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-2xl overflow-hidden shadow-soft group border border-slate-100 flex flex-col">
-              <div className="h-64 overflow-hidden relative">
-                <img 
-                  src="/images/img24.jpeg" 
-                  alt="Shakil Ahmed address at NGO Conference 2025" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 bg-[#EB1F23] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">
-                  Keynote Speech
-                </span>
-              </div>
-              <div className="p-4 bg-slate-50 flex-1">
-                <h4 className="font-bold text-[#184E82] text-sm">NGO Conference 2025</h4>
-                <p className="text-xs text-[#5F5F5F] mt-1">
-                  President Shakil Ahmed addressing leadership delegates on patient welfare & healthcare access.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden shadow-soft group border border-slate-100 flex flex-col">
-              <div className="h-64 overflow-hidden relative">
-                <img 
-                  src="/images/img22.jpeg" 
-                  alt="State Level NGO Conference Mumbai" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 bg-[#184E82] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">
-                  State Forum
-                </span>
-              </div>
-              <div className="p-4 bg-slate-50 flex-1">
-                <h4 className="font-bold text-[#184E82] text-sm">Maharashtra NGO Forum</h4>
-                <p className="text-xs text-[#5F5F5F] mt-1">
-                  Engaging with healthcare policymakers and media in Byculla, Mumbai for healthcare advocacy.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden shadow-soft group border border-slate-100 flex flex-col">
-              <div className="h-64 overflow-hidden relative">
-                <img 
-                  src="/images/img18.jpeg" 
-                  alt="Bedside patient examination" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">
-                  Hospital Bedside
-                </span>
-              </div>
-              <div className="p-4 bg-slate-50 flex-1">
-                <h4 className="font-bold text-[#184E82] text-sm">Direct Bedside Assistance</h4>
-                <p className="text-xs text-[#5F5F5F] mt-1">
-                  Personally examining and counseling admitted patients needing surgical and post-operative care.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-3xl mb-14 space-y-3">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
+              <UserCheck className="w-3.5 h-3.5 text-coral-600" />
+              <span>Ground Field Force</span>
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+              Active Hospital & Community Coordinators
+            </h2>
+            <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+              Serving round the clock at hospital bedside, community food distribution, and clean air planting drives.
+            </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {committeeMembers.map((item) => (
+              <div
+                key={item.id}
+                className="p-6 rounded-2xl bg-ivory border border-ivory-border shadow-editorial flex flex-col justify-between space-y-3"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-serif text-lg font-bold text-navy-900">
+                      {item.name}
+                    </h3>
+                    <span className="text-xs font-bold text-forest-800 uppercase tracking-wider block mt-0.5">
+                      {item.role}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-semibold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-md border border-teal-200 shrink-0">
+                    {item.location}
+                  </span>
+                </div>
+                <p className="text-xs text-navy-700 leading-relaxed">
+                  {item.focus}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Volunteer CTA */}
+      <section className="py-20 bg-forest-950 text-white text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+            <Heart className="w-3.5 h-3.5 text-coral-400 fill-current" />
+            <span>Join Our Volunteer Network</span>
+          </span>
+
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Want to Serve as a Hospital Volunteer?
+          </h2>
+
+          <p className="text-forest-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            We are always looking for compassionate individuals in Mumbai, Jalgaon, and surrounding districts to guide arriving patients, distribute daily nutrition, or coordinate medicine aid.
+          </p>
+
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
+            >
+              <span>Apply as a Volunteer</span>
+            </Link>
+            <Link
+              to="/donate"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
+            >
+              <Heart className="w-4 h-4 fill-current text-coral-400" />
+              <span>Support Our Field Staff</span>
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,9 +15,9 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-white text-slate-800 antialiased selection:bg-[#EB1F23] selection:text-white overflow-x-clip w-full max-w-full">
+      <div className="min-h-screen flex flex-col bg-ivory text-navy-900 font-sans selection:bg-coral-500 selection:text-white overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow">
+        <main id="main-content" className="flex-1 focus:outline-none" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/activities" element={<Activities />} />
@@ -27,7 +26,6 @@ export default function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
-            {/* Catch-all route redirecting to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

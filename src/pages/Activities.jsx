@@ -1,240 +1,291 @@
-import React from 'react';
-import PageHero from '../components/PageHero';
-import SectionHeading from '../components/SectionHeading';
-import ServiceCard from '../components/ServiceCard';
-import InitiativeCard from '../components/InitiativeCard';
-import ProjectCard from '../components/ProjectCard';
-import Button from '../components/Button';
-import { servicesData } from '../data/services';
-import { featuredInitiatives } from '../data/initiatives';
-import { Heart, Activity, ShieldCheck, HelpingHand, Camera, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  Heart,
+  TreePine,
+  Stethoscope,
+  CheckCircle2,
+  Camera,
+  Building2,
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import {
+  ACTIVITIES_PILLARS,
+} from '../data/foundationContent';
+import KhandeshHouseShowcase from '../components/KhandeshHouseShowcase';
+import {
+  ServicesGridSection,
+  CancerSupportSection,
+  CommunityInterventionsSection,
+} from '../components/ServicesAndCancerSection';
 
 export default function Activities() {
-  const fieldGallery = [
-    {
-      img: '/images/img11.jpeg',
-      title: 'Free Medical Checkup & Blood Test Camp',
-      category: 'Medical Camp',
-      desc: 'Free health screening, diagnostic blood tests, and doctor consultations for underprivileged families.'
-    },
-    {
-      img: '/images/img16.jpeg',
-      title: 'Bedside Relief & Patient Counseling',
-      category: 'Hospital Care',
-      desc: 'Shakil Ahmed and team providing bedside encouragement, medicines, and surgical care funds.'
-    },
-    {
-      img: '/images/img9.jpeg',
-      title: 'Tree Plantation & Clean Air Campaign',
-      category: 'Environmental Aid',
-      desc: 'Planting fruit and shade trees across Jalgaon rural belts under the prophetic Hadith of continuous charity (Sadaqah Jariyah).'
-    },
-    {
-      img: '/images/img26.jpeg',
-      title: 'National Health Mission Collaboration',
-      category: 'Public Health',
-      desc: 'First Aid Foundation delegates collaborating with NHM Maharashtra officers in tobacco control and health education.'
-    },
-    {
-      img: '/images/img17.jpeg',
-      title: 'Patient Hospital Guidance',
-      category: 'JJ Hospital Support',
-      desc: 'Guiding admitted patients with brochures, legal scheme assistance, and free dietary support.'
-    },
-    {
-      img: '/images/img10.jpeg',
-      title: 'Community Education & Child Support',
-      category: 'Social Upliftment',
-      desc: 'Supporting maktabs and underprivileged students with educational materials and care.'
-    }
-  ];
-
   return (
     <div className="space-y-0">
-      
-      {/* Page Hero with AI Banner */}
-      <PageHero
-        title="Ultimately, Your Support Empowers Lives"
-        subtitle="Medical emergencies, sudden accidents, and critical health challenges destroy families financially and emotionally. Timely assistance, shelter, and medical relief restore dignity and life."
-        badge="Our Activities & Relief Work"
-        bgImage="/images/patient-mobility-wheelchair.jpg"
+      <SEOHead
+        title="Activities & Medical Relief Programs"
+        description="Explore First Aid Foundation's medical relief activities: Emergency Intervention, Shelter & Food Aid, Government Scheme Guidance, Khandesh House Free Stay Facility, Tree Bank for Clean Air, and 9 free healthcare support services."
+        canonicalPath="/activities"
       />
 
-      {/* Intro Overview Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div className="rounded-3xl bg-blue-50/40 border border-blue-100 overflow-hidden shadow-soft hover:shadow-md transition-all duration-300 group flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/images/emergency-surgery.jpg" 
-                  alt="Emergency surgery and critical care intervention" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
-                  <div className="w-8 h-8 rounded-lg bg-[#184E82] text-white flex items-center justify-center shadow-sm">
-                    <Activity className="w-4 h-4" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider">Critical Care</span>
-                </div>
-              </div>
-              <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-[#184E82] mb-1">Emergency Intervention</h3>
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                    Providing urgent surgery funds, ICU equipment, and emergency medicines to critical patients admitted in government hospitals.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl bg-red-50/40 border border-red-100 overflow-hidden shadow-soft hover:shadow-md transition-all duration-300 group flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/images/khandesh-shelter.jpg" 
-                  alt="Shelter dormitory and meals for patient families" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
-                  <div className="w-8 h-8 rounded-lg bg-[#EB1F23] text-white flex items-center justify-center shadow-sm">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider">Free Stay & Meals</span>
-                </div>
-              </div>
-              <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-[#184E82] mb-1">Shelter & Food Aid</h3>
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                    Arranging accommodation and daily meals for patient families who travel long distances to Mumbai for medical treatments.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl bg-blue-50/40 border border-blue-100 overflow-hidden shadow-soft hover:shadow-md transition-all duration-300 group flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/images/doctor-consultation-care.jpg" 
-                  alt="Doctor guidance and government healthcare scheme assistance" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
-                  <div className="w-8 h-8 rounded-lg bg-[#184E82] text-white flex items-center justify-center shadow-sm">
-                    <HelpingHand className="w-4 h-4" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider">Scheme Guidance</span>
-                </div>
-              </div>
-              <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-[#184E82] mb-1">Government Scheme Guidance</h3>
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                    Guiding eligible families through government welfare schemes and NGO networks to secure 100% free healthcare.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Flagship Project Spotlight */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Flagship Shelter Initiative"
-            title="Khandesh House Free Stay Facility"
-            subtitle="Providing a dignified home away from home for families visiting Mumbai government hospitals."
-          />
-
-          <ProjectCard detailed={true} />
-        </div>
-      </section>
-
-      {/* Featured Initiatives */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Ongoing Programs"
-            title="Major Foundation Initiatives"
-            subtitle="Explore our key active projects across healthcare, environmental clean air, and hospital assistance."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredInitiatives.map((initiative) => (
-              <InitiativeCard key={initiative.id} initiative={initiative} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All Healthcare Services */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Services Grid"
-            title="Medical Relief & Support Services"
-            subtitle="Available free of cost to eligible patients and families."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ON-GROUND RELIEF GALLERY (REAL AUTHENTIC PHOTOS) */}
-      <section className="py-20 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Ground Reality"
-            title="Field Relief & Activities In Action"
-            subtitle="Authentic photos from our free medical camps, hospital bedside relief, and environmental programs."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {fieldGallery.map((item, idx) => (
-              <div 
-                key={idx}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-soft hover:shadow-xl transition-all duration-300 group flex flex-col"
+      {/* Page Hero */}
+      <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
+        <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl space-y-5">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+              <Stethoscope className="w-3.5 h-3.5 text-coral-400" />
+              <span>Our Activities & Humanitarian Relief Work</span>
+            </span>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Ultimately, Your Support Empowers Lives
+            </h1>
+            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+              Medical emergencies, sudden accidents, and critical health challenges devastate
+              low-income families financially and emotionally. Timely assistance, hospital guidance,
+              free shelter, and medical relief restore dignity and life.
+            </p>
+            <div className="pt-2 flex flex-wrap items-center gap-4">
+              <Link
+                to="/donate"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
               >
-                <div className="h-60 overflow-hidden relative bg-slate-100">
-                  <img 
-                    src={item.img} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 bg-[#EB1F23] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    {item.category}
-                  </span>
-                </div>
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-2">
-                  <div>
-                    <h4 className="text-lg font-bold text-[#184E82] group-hover:text-[#EB1F23] transition-colors leading-snug">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-[#5F5F5F] leading-relaxed mt-2">
-                      {item.desc}
+                <Heart className="w-4 h-4 fill-current" />
+                <span>Support Medical Relief</span>
+              </Link>
+              <Link
+                to="/activities/khandesh-house"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-sm transition-all"
+              >
+                <Building2 className="w-4 h-4 text-coral-400" />
+                <span>Khandesh House Shelter</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 1. Three Core Operational Pillars */}
+      <section
+        aria-labelledby="operational-pillars-heading"
+        className="py-20 lg:py-24 bg-white border-b border-ivory-border"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14 space-y-3">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
+              <span>Immediate Response Framework</span>
+            </span>
+            <h2
+              id="operational-pillars-heading"
+              className="font-serif text-3xl sm:text-4xl font-bold text-navy-900"
+            >
+              Three Pillars of Hospital & Patient Support
+            </h2>
+            <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+              When a vulnerable family arrives at a major government hospital, our field team
+              mobilizes across three critical dimensions simultaneously.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {ACTIVITIES_PILLARS.map((pillar) => (
+              <article
+                key={pillar.id}
+                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial flex flex-col justify-between"
+              >
+                <div>
+                  <figure className="relative h-52 overflow-hidden bg-forest-950">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.imageCaption}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+                    <figcaption className="absolute bottom-2.5 left-3 right-3 text-[10px] text-ivory flex items-center gap-1">
+                      <Camera className="w-3 h-3 text-coral-400 shrink-0" />
+                      <span className="truncate">{pillar.imageCaption}</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="p-6 sm:p-7 space-y-3">
+                    <span className="text-xs font-bold uppercase tracking-wider text-teal-800 block">
+                      {pillar.subtitle}
+                    </span>
+                    <h3 className="font-serif text-2xl font-bold text-navy-900">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-sm text-navy-700 leading-relaxed">
+                      {pillar.description}
                     </p>
                   </div>
                 </div>
-              </div>
+
+                <div className="px-6 pb-6 sm:px-7 sm:pb-7 pt-2">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-forest-900">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    <span>Free Humanitarian Relief</span>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-14 text-center">
-            <Button to="/donate" variant="primary" size="lg" icon={Heart}>
-              Support Our On-Ground Activities
-            </Button>
+      {/* 2. Tree Bank for Clean Air Feature */}
+      <section
+        id="tree-bank"
+        aria-labelledby="tree-bank-heading"
+        className="py-20 lg:py-24 bg-forest-900 text-white relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-800 text-emerald-300 text-xs font-bold uppercase tracking-widest border border-forest-700">
+                <TreePine className="w-3.5 h-3.5 text-coral-400" />
+                <span>Environmental & Preventive Public Health</span>
+              </div>
+
+              <h2
+                id="tree-bank-heading"
+                className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"
+              >
+                Tree Bank for Clean Air:{' '}
+                <span className="text-emerald-300 italic font-normal">
+                  Breathing Life into Tomorrow
+                </span>
+              </h2>
+
+              <p className="text-base sm:text-lg text-forest-100 leading-relaxed">
+                Health begins with the air we breathe. In direct support of the{' '}
+                <strong>National Clean Air Programme (NCAP)</strong> and Maharashtra’s{' '}
+                <strong>Majhi Vasundhara 4.0</strong> campaign, First Aid Foundation actively drives
+                large-scale urban and semi-urban sapling plantation drives. By restoring green cover,
+                we combat chronic respiratory illnesses and enhance community longevity.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 rounded-xl bg-forest-950/80 border border-forest-800 space-y-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-coral-300 block">
+                    National Clean Air Programme (NCAP)
+                  </span>
+                  <p className="text-xs text-forest-200">
+                    Targeted reduction of particulate matter through strategic tree belts in industrial zones.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-forest-950/80 border border-forest-800 space-y-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-300 block">
+                    Majhi Vasundhara 4.0
+                  </span>
+                  <p className="text-xs text-forest-200">
+                    Community mobilization for biodiversity protection, water conservation, and soil enrichment.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <Link
+                  to="/donate"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+                >
+                  <Heart className="w-4 h-4 fill-current" />
+                  <span>Sponsor a Sapling Drive</span>
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-forest-800 hover:bg-forest-700 text-white border border-forest-600 font-semibold text-sm transition-all"
+                >
+                  <span>Join as Volunteer</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <figure className="rounded-3xl overflow-hidden border border-forest-700 shadow-editorial-lg bg-forest-950">
+                <img
+                  src="/images/tree-bank.jpg"
+                  alt="Community sapling plantation drive under Majhi Vasundhara and National Clean Air Programme"
+                  className="w-full h-80 sm:h-96 object-cover"
+                  loading="lazy"
+                />
+                <figcaption className="p-3.5 bg-forest-950 text-forest-200 text-xs flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1.5 font-medium">
+                    <Camera className="w-3.5 h-3.5 text-coral-400 shrink-0" />
+                    <span>Tree Bank Sapling Plantation Drive</span>
+                  </span>
+                  <span className="text-[10px] uppercase font-bold text-emerald-300">
+                    Clean Air
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. All 9 Healthcare & Relief Services Grid */}
+      <ServicesGridSection />
+
+      {/* 4. Cancer Support Initiative */}
+      <CancerSupportSection />
+
+      {/* 5. 11 Community Interventions */}
+      <CommunityInterventionsSection />
+
+      {/* 6. Khandesh House Project Showcase */}
+      <section
+        aria-labelledby="activities-khandesh-heading"
+        className="py-20 lg:py-24 bg-ivory"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <div className="space-y-2 max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
+                <span>Flagship Patient Shelter</span>
+              </span>
+              <h2
+                id="activities-khandesh-heading"
+                className="font-serif text-3xl sm:text-4xl font-bold text-navy-900"
+              >
+                Khandesh House Free Stay Facility in Mumbai
+              </h2>
+            </div>
+            <p className="text-sm sm:text-base text-navy-700 max-w-xl leading-relaxed">
+              Discover the full specifications of our 15-bed shelter project designed to protect outstation families from sleeping on footpaths outside Mumbai hospitals.
+            </p>
+          </div>
+
+          <KhandeshHouseShowcase detailed={false} />
+        </div>
+      </section>
+
+      {/* 7. Final Action Banner */}
+      <section className="py-16 bg-forest-950 text-white border-t border-forest-800 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Support Our Medical Relief Initiatives Today
+          </h2>
+          <p className="text-forest-200 text-base max-w-2xl mx-auto leading-relaxed">
+            Your contributions directly fund surgeries, cancer nutritional kits, and free patient lodging.
+          </p>
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/donate"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
+            >
+              <Heart className="w-5 h-5 fill-current" />
+              <span>Donate Now</span>
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
+            >
+              <span>Get in Touch</span>
+            </Link>
           </div>
         </div>
       </section>
