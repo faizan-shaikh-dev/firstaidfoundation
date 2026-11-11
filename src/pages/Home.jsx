@@ -28,6 +28,7 @@ import {
 } from '../components/ServicesAndCancerSection';
 import KhandeshHouseShowcase from '../components/KhandeshHouseShowcase';
 import { BankTransferCard, UpiQrCard } from '../components/DonationWidgets';
+import { ARTICLES_DATA } from '../data/articles';
 
 export default function Home() {
   return (
@@ -532,6 +533,74 @@ export default function Home() {
 
       {/* 10. Testimonials */}
       <TestimonialsSection />
+
+      {/* Latest News & Articles Section */}
+      <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 gsap-fade-up">
+            <div className="space-y-2 max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
+                <BookOpen className="w-3.5 h-3.5 text-coral-600" />
+                <span>Foundation Dispatches & News</span>
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+                Latest Articles & Cultural Initiatives
+              </h2>
+            </div>
+            <Link
+              to="/articles"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-coral-600 hover:text-coral-700 transition-colors uppercase tracking-wider"
+            >
+              <span>Explore All Articles ({ARTICLES_DATA.length}) →</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 gsap-card-group">
+            {ARTICLES_DATA.slice(0, 3).map((article) => (
+              <article
+                key={article.id}
+                className="card-hover-editorial bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial flex flex-col justify-between"
+              >
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-forest-950">
+                    <img
+                      src={article.coverImage}
+                      alt={article.titleEn}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+                    <span className="absolute top-3 left-3 bg-forest-900 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                      {article.category}
+                    </span>
+                    <span className="absolute bottom-2.5 right-3 text-ivory text-[11px] font-semibold">
+                      {article.dateDisplayEn}
+                    </span>
+                  </div>
+
+                  <div className="p-5 sm:p-6 space-y-2.5">
+                    <h3 className="font-serif text-lg font-bold text-navy-900 leading-snug line-clamp-2">
+                      {article.titleEn}
+                    </h3>
+                    <p className="text-xs text-navy-600 leading-relaxed line-clamp-2">
+                      {article.summaryEn}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 sm:p-6 pt-0 border-t border-ivory-border/70 mt-2">
+                  <Link
+                    to={`/articles/${article.slug}`}
+                    className="inline-flex items-center gap-1 text-xs font-bold text-coral-600 hover:text-coral-700 transition-colors"
+                  >
+                    <span>Read Full Story →</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 11. Official Bank Details Card */}
       <section

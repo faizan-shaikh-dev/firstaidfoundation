@@ -114,6 +114,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/articles" className="hover:text-coral-300 transition-colors flex items-center gap-1.5">
+                  <ArrowRight className="w-3.5 h-3.5 text-coral-400" />
+                  <span>Articles & Reports</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/about" className="hover:text-coral-300 transition-colors flex items-center gap-1.5">
                   <ArrowRight className="w-3.5 h-3.5 text-coral-400" />
                   <span>About Us</span>

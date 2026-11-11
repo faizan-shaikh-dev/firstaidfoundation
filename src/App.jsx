@@ -6,6 +6,8 @@ import SmoothScrollProvider from './components/SmoothScrollProvider';
 import Home from './pages/Home';
 import Activities from './pages/Activities';
 import KhandeshHouse from './pages/KhandeshHouse';
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
 import About from './pages/About';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
@@ -22,6 +24,8 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/activities/khandesh-house" element={<KhandeshHouse />} />
+              <Route path="/articles" element={<Articles />} />
+              <Route path="/articles/:slug" element={<ArticleDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />

@@ -15,6 +15,7 @@ const NAV_ROUTES = [
   { name: 'Home', path: '/' },
   { name: 'Activities', path: '/activities' },
   { name: 'Khandesh House', path: '/activities/khandesh-house', badge: 'Shelter' },
+  { name: 'Articles', path: '/articles', badge: 'New' },
   { name: 'About Us', path: '/about' },
   { name: 'Team', path: '/team' },
   { name: 'Contact Us', path: '/contact' },
@@ -95,13 +96,13 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 lg:gap-3 xl:gap-4">
             
             {/* Brand Logo & Identity */}
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 sm:gap-3 group min-w-0 max-w-[calc(100%-110px)] sm:max-w-none"
+              className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 group shrink-0"
               aria-label="First Aid Foundation Home"
             >
               <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-ivory-warm p-1 sm:p-1.5 border border-ivory-border shadow-2xs group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
@@ -113,11 +114,11 @@ export default function Navbar() {
                   height={44}
                 />
               </div>
-              <div className="flex flex-col min-w-0">
-                <span className="font-serif font-bold text-sm sm:text-lg lg:text-xl text-navy-900 group-hover:text-forest-900 transition-colors leading-tight truncate">
+              <div className="flex flex-col shrink-0">
+                <span className="font-serif font-bold text-xs xs:text-sm sm:text-base lg:text-base xl:text-xl text-navy-900 group-hover:text-forest-900 transition-colors leading-tight whitespace-nowrap">
                   First Aid Foundation
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-bold text-coral-600 tracking-wider uppercase truncate hidden xs:block">
+                <span className="text-[9px] sm:text-[10px] xl:text-[11px] font-bold text-coral-600 tracking-wider uppercase whitespace-nowrap hidden xs:block">
                   {BRAND_CONTENT.tagline}
                 </span>
               </div>
@@ -126,7 +127,7 @@ export default function Navbar() {
             {/* Desktop Navigation Links */}
             <nav
               aria-label="Primary Navigation"
-              className="hidden lg:flex items-center gap-1 xl:gap-2"
+              className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-2 shrink min-w-0"
             >
               {NAV_ROUTES.map((route) => {
                 const active = isRouteActive(route.path);
@@ -135,21 +136,21 @@ export default function Navbar() {
                     key={route.path}
                     to={route.path}
                     aria-current={active ? 'page' : undefined}
-                    className={`relative px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-150 inline-flex items-center gap-1.5 ${
+                    className={`relative whitespace-nowrap px-2 py-1.5 xl:px-2.5 2xl:px-3.5 xl:py-2 text-xs xl:text-sm font-semibold transition-all duration-150 inline-flex items-center gap-1 xl:gap-1.5 shrink-0 rounded-xl ${
                       active
-                        ? 'text-forest-900 bg-forest-50/80 font-bold'
+                        ? 'text-forest-900 bg-forest-50/90 font-bold'
                         : 'text-navy-700 hover:text-forest-900 hover:bg-ivory-warm'
                     }`}
                   >
                     <span>{route.name}</span>
                     {route.badge && (
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-teal-800 text-white leading-none">
+                      <span className="hidden xl:inline-block text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-teal-800 text-white leading-none">
                         {route.badge}
                       </span>
                     )}
                     {active && (
                       <span
-                        className="absolute bottom-0.5 left-3.5 right-3.5 h-0.5 bg-coral-500 rounded-full"
+                        className="absolute bottom-0.5 left-2 right-2 xl:left-2.5 xl:right-2.5 2xl:left-3.5 2xl:right-3.5 h-0.5 bg-coral-500 rounded-full"
                         aria-hidden="true"
                       />
                     )}
@@ -159,12 +160,12 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
               <Link
                 to="/donate"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-1.5 xl:gap-2 px-3.5 py-2 xl:px-5 xl:py-2.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-xs xl:text-sm shadow-coral-glow transition-all duration-200 active:scale-[0.98] whitespace-nowrap shrink-0"
               >
-                <Heart className="w-4 h-4 fill-current" />
+                <Heart className="w-3.5 h-3.5 xl:w-4 xl:h-4 fill-current shrink-0" />
                 <span>Donate Now</span>
               </Link>
             </div>
@@ -174,7 +175,7 @@ export default function Navbar() {
               <Link
                 to="/donate"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center gap-1 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-coral-600 hover:bg-coral-700 text-white font-bold text-xs shadow-xs shrink-0"
+                className="inline-flex items-center gap-1 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-coral-600 hover:bg-coral-700 text-white font-bold text-xs shadow-xs shrink-0 whitespace-nowrap"
               >
                 <Heart className="w-3.5 h-3.5 fill-current shrink-0" />
                 <span>Donate</span>
