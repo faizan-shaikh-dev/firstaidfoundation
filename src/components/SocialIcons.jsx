@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function FacebookIcon({ className = "w-4 h-4" }) {
   return (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

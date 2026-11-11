@@ -1,4 +1,3 @@
-import React from 'react';
 import { User, ShieldCheck, Phone } from 'lucide-react';
 
 export default function TeamCard({ member }) {

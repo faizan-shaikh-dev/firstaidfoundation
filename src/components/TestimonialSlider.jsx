@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { testimonialsData } from '../data/testimonials';
 import { Quote, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import SectionHeading from './SectionHeading';

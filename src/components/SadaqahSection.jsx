@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, QrCode, ShieldAlert, Sparkles } from 'lucide-react';
+import { Heart, Sparkles } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import Button from './Button';
 import QRDonation from './QRDonation';

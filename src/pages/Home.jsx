@@ -39,40 +39,40 @@ export default function Home() {
       />
 
       {/* 1. Editorial Hero Section */}
-      <section className="relative bg-ivory bg-editorial-grid pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-ivory-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <section className="relative bg-ivory bg-editorial-grid pt-6 pb-14 sm:pt-14 sm:pb-24 border-b border-ivory-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Editorial Copy */}
-            <div className="lg:col-span-7 space-y-6 animate-fade-up">
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-forest-900 text-ivory text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 animate-fade-up">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 text-ivory text-xs sm:text-sm font-bold tracking-wide shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-coral-400 animate-pulse" />
                 <span>{BRAND_CONTENT.organizationType}</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-bold text-navy-900 tracking-tight leading-[1.08]">
+              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-bold text-navy-900 tracking-tight leading-[1.08]">
                 Helping Grow{' '}
                 <span className="text-forest-800 underline decoration-coral-500/70 decoration-4 underline-offset-8">
                   Humanity
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-navy-700 leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-xl text-navy-700 leading-relaxed max-w-2xl font-normal">
                 {BRAND_CONTENT.missionStatement}
               </p>
 
               {/* Primary CTAs */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
                   to="/donate"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all duration-200 active:scale-[0.99]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all duration-200 active:scale-[0.99]"
                 >
                   <Heart className="w-5 h-5 fill-current" />
                   <span>Donate Now</span>
                 </Link>
                 <Link
                   to="/activities"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white hover:bg-ivory-warm text-forest-900 border-2 border-forest-800/80 font-bold text-base transition-all duration-200"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white hover:bg-ivory-warm text-forest-900 border-2 border-forest-800/80 font-bold text-base transition-all duration-200"
                 >
                   <span>Explore Our Work</span>
                   <ArrowRight className="w-5 h-5 text-coral-600" />
@@ -138,8 +138,8 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
 
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                    <span className="px-2.5 py-1 rounded-md bg-forest-900/90 text-emerald-300 text-[11px] font-bold uppercase tracking-wider backdrop-blur-xs border border-forest-700">
+                  <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2">
+                    <span className="px-2.5 py-1 rounded-md bg-forest-900/90 text-emerald-300 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider backdrop-blur-xs border border-forest-700">
                       Jalgaon & Mumbai Relief
                     </span>
                     <span className="px-2.5 py-1 rounded-md bg-navy-950/75 text-ivory text-[10px] font-medium inline-flex items-center gap-1 backdrop-blur-xs">
@@ -149,7 +149,7 @@ export default function Home() {
                   </div>
 
                   <figcaption className="absolute bottom-3 left-4 right-4 text-white">
-                    <p className="font-serif text-lg font-bold leading-snug">
+                    <p className="font-serif text-base sm:text-lg font-bold leading-snug">
                       Standing Beside Underprivileged Families at Every Step of Hospital Care
                     </p>
                     <p className="text-xs text-ivory/85 mt-0.5">
@@ -159,9 +159,9 @@ export default function Home() {
                 </figure>
 
                 {/* Flagship Khandesh House Quick Highlight Card */}
-                <div className="p-5 rounded-2xl bg-forest-900 text-white space-y-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-coral-300">
+                <div className="p-4 sm:p-5 rounded-2xl bg-forest-900 text-white space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-coral-300">
                       <Building2 className="w-3.5 h-3.5" />
                       <span>Featured Flagship Project</span>
                     </span>
@@ -169,14 +169,14 @@ export default function Home() {
                       Target: ₹30,00,000
                     </span>
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-white">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-white">
                     Khandesh House Free Shelter, Mumbai
                   </h3>
                   <p className="text-xs text-forest-100 leading-relaxed">
                     A dedicated 2-storey, 15-bed stay facility with 2 bathrooms and a community
                     kitchen for outstation patients and families visiting Mumbai’s government hospitals.
                   </p>
-                  <div className="pt-1 flex items-center justify-between">
+                  <div className="pt-1 flex flex-wrap items-center justify-between gap-2">
                     <Link
                       to="/activities/khandesh-house"
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 hover:text-white transition-colors"
@@ -320,7 +320,7 @@ export default function Home() {
             {BRAND_CONTENT.quranicReferences.map((item) => (
               <blockquote
                 key={item.id}
-                className="bg-teal-900/70 backdrop-blur-xs rounded-3xl p-8 sm:p-10 border border-teal-800 shadow-editorial-lg flex flex-col justify-between"
+                className="bg-teal-900/70 backdrop-blur-xs rounded-3xl p-5 sm:p-8 lg:p-10 border border-teal-800 shadow-editorial-lg flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-teal-950/80 border border-teal-700 text-emerald-300 text-xs font-bold uppercase tracking-wider">
@@ -361,7 +361,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
             
             {/* Left Sadaqah & Humanitarian Giving Explanation */}
-            <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-ivory-border shadow-editorial flex flex-col justify-between space-y-6">
+            <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-ivory-border shadow-editorial flex flex-col justify-between space-y-6">
               <div className="space-y-5">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                   <Sparkles className="w-3.5 h-3.5 text-coral-600" />
@@ -370,7 +370,7 @@ export default function Home() {
 
                 <h2
                   id="sadaqah-heading"
-                  className="font-serif text-3xl sm:text-4xl font-bold text-navy-900 leading-tight"
+                  className="font-serif text-2xl sm:text-4xl font-bold text-navy-900 leading-tight"
                 >
                   Heal Yourself with Charity (Sadaqah)
                 </h2>
@@ -412,15 +412,15 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="pt-6 border-t border-ivory-border flex flex-wrap items-center gap-4">
+              <div className="pt-6 border-t border-ivory-border flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
                 <Link
                   to="/donate"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
                 >
                   <Heart className="w-4 h-4 fill-current" />
                   <span>Give Sadaqah / Donate Now</span>
                 </Link>
-                <span className="text-xs text-navy-600 font-medium inline-flex items-center gap-1.5">
+                <span className="text-xs text-navy-600 font-medium inline-flex items-center justify-center gap-1.5 py-1">
                   <ShieldCheck className="w-4 h-4 text-forest-700" />
                   <span>Verified Foundation Account</span>
                 </span>

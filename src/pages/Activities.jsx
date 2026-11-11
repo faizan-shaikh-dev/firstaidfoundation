@@ -28,15 +28,15 @@ export default function Activities() {
       />
 
       {/* Page Hero */}
-      <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
+      <section className="bg-forest-950 text-white py-14 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <Stethoscope className="w-3.5 h-3.5 text-coral-400" />
               <span>Our Activities & Humanitarian Relief Work</span>
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Ultimately, Your Support Empowers Lives
             </h1>
             <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
@@ -44,17 +44,17 @@ export default function Activities() {
               low-income families financially and emotionally. Timely assistance, hospital guidance,
               free shelter, and medical relief restore dignity and life.
             </p>
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
               <Link
                 to="/donate"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
               >
                 <Heart className="w-4 h-4 fill-current" />
                 <span>Support Medical Relief</span>
               </Link>
               <Link
                 to="/activities/khandesh-house"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-sm transition-all"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-sm transition-all"
               >
                 <Building2 className="w-4 h-4 text-coral-400" />
                 <span>Khandesh House Shelter</span>
@@ -186,17 +186,17 @@ export default function Activities() {
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
                 <Link
                   to="/donate"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
                 >
                   <Heart className="w-4 h-4 fill-current" />
                   <span>Sponsor a Sapling Drive</span>
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-forest-800 hover:bg-forest-700 text-white border border-forest-600 font-semibold text-sm transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-forest-800 hover:bg-forest-700 text-white border border-forest-600 font-semibold text-sm transition-all"
                 >
                   <span>Join as Volunteer</span>
                 </Link>
@@ -272,17 +272,17 @@ export default function Activities() {
           <p className="text-forest-200 text-base max-w-2xl mx-auto leading-relaxed">
             Your contributions directly fund surgeries, cancer nutritional kits, and free patient lodging.
           </p>
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/donate"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
             >
               <Heart className="w-5 h-5 fill-current" />
               <span>Donate Now</span>
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
             >
               <span>Get in Touch</span>
             </Link>

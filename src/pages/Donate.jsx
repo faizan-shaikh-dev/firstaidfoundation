@@ -58,15 +58,15 @@ export default function Donate() {
       />
 
       {/* Page Hero */}
-      <section className="bg-forest-950 text-white py-16 lg:py-20 relative overflow-hidden border-b border-forest-800">
+      <section className="bg-forest-950 text-white py-14 lg:py-20 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
               <Heart className="w-3.5 h-3.5 fill-current" />
               <span>Direct Medical Relief & Sadaqah Fund</span>
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Donate for Timely Medical Assistance
             </h1>
             <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
@@ -79,14 +79,14 @@ export default function Donate() {
       </section>
 
       {/* 1. Bank Transfer & Official UPI QR Slot (Primary Action Section) */}
-      <section className="py-16 lg:py-22 bg-ivory border-b border-ivory-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="py-14 sm:py-16 lg:py-22 bg-ivory border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
           <div className="max-w-3xl space-y-2">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Official Direct Remittance Channels</span>
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900">
               Verified Foundation Bank Account & UPI Slot
             </h2>
             <p className="text-sm sm:text-base text-navy-700 leading-relaxed">
@@ -96,7 +96,7 @@ export default function Donate() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
             <div className="lg:col-span-7">
               <BankTransferCard />
             </div>
@@ -110,40 +110,40 @@ export default function Donate() {
       {/* 2. Six Core Donation Purposes */}
       <section
         aria-labelledby="donation-purposes-heading"
-        className="py-20 lg:py-24 bg-white border-b border-ivory-border"
+        className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
               <span>Where Your Contribution Goes</span>
             </span>
             <h2
               id="donation-purposes-heading"
-              className="font-serif text-3xl sm:text-4xl font-bold text-navy-900"
+              className="font-serif text-2xl sm:text-4xl font-bold text-navy-900"
             >
               Choose How Your Sadaqah or Donation Heals
             </h2>
-            <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+            <p className="text-sm sm:text-lg text-navy-700 leading-relaxed">
               You can allocate your contribution toward any of our six core patient welfare funds.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {DONATION_PURPOSES.map((purpose) => (
               <div
                 key={purpose.id}
-                className="bg-ivory rounded-3xl p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
+                className="bg-ivory rounded-3xl p-5 sm:p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-2xl bg-white border border-ivory-border flex items-center justify-center shadow-2xs">
                     {purposeIcons[purpose.id]}
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold text-navy-900">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-navy-900">
                     {purpose.title}
                   </h3>
 
-                  <p className="text-sm text-navy-700 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-navy-700 leading-relaxed">
                     {purpose.description}
                   </p>
                 </div>
@@ -161,9 +161,9 @@ export default function Donate() {
       </section>
 
       {/* 3. Sadaqah & Humanitarian Giving Philosophy */}
-      <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="py-16 sm:py-20 lg:py-24 bg-ivory border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-7 space-y-5">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
@@ -171,15 +171,15 @@ export default function Donate() {
                 <span>Humanitarian Charity & Sadaqah</span>
               </span>
 
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900 leading-tight">
                 Heal Yourself with Charity (Sadaqah)
               </h2>
 
-              <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+              <p className="text-sm sm:text-lg text-navy-700 leading-relaxed">
                 In times of distress or illness, giving charity shields families from calamity and brings healing. Countless outstation patients arrive in Mumbai with exhausted savings. Your donation ensures they receive life-saving medicines, nutritious food, and dignified shelter.
               </p>
 
-              <div className="p-5 rounded-2xl bg-coral-50/80 border-l-4 border-coral-600 space-y-2">
+              <div className="p-4 sm:p-5 rounded-2xl bg-coral-50/80 border-l-4 border-coral-600 space-y-2">
                 <h3 className="text-sm font-bold text-navy-900">
                   100% Policy for Patient Care
                 </h3>
@@ -189,7 +189,7 @@ export default function Donate() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4">
+            <div className="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-8 border border-ivory-border shadow-editorial space-y-4">
               <h3 className="font-serif text-xl font-bold text-navy-900">
                 Donation Impact Guarantee
               </h3>
@@ -218,32 +218,32 @@ export default function Donate() {
       </section>
 
       {/* 4. Step-by-Step Mobile Giving Instructions */}
-      <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Smartphone className="w-3.5 h-3.5 text-coral-600" />
               <span>Easy 4-Step Guide</span>
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900">
               How to Donate via UPI / Bank App
             </h2>
-            <p className="text-base sm:text-lg text-navy-700 leading-relaxed">
+            <p className="text-sm sm:text-lg text-navy-700 leading-relaxed">
               Complete your transfer in under 60 seconds with your preferred payment application.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {mobileSteps.map((s) => (
               <div
                 key={s.step}
-                className="p-6 rounded-2xl bg-ivory border border-ivory-border space-y-3 flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-2xl bg-ivory border border-ivory-border space-y-3 flex flex-col justify-between"
               >
                 <div>
                   <span className="font-mono text-xs font-bold text-coral-600 block mb-2">
                     STEP {s.step}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-navy-900 mb-1">
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-navy-900 mb-1">
                     {s.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-navy-700 leading-relaxed">
@@ -257,8 +257,8 @@ export default function Donate() {
       </section>
 
       {/* 5. Helpline Reassurance Banner */}
-      <section className="py-16 bg-forest-950 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <section className="py-14 sm:py-16 bg-forest-950 text-white text-center">
+        <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4">
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
             Need Assistance with Your Remittance?
           </h2>
@@ -268,9 +268,9 @@ export default function Donate() {
           <div className="pt-2">
             <a
               href={`tel:${BRAND_CONTENT.contact.phoneRaw}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 shrink-0" />
               <span>Call Helpline: {BRAND_CONTENT.contact.phoneDisplay}</span>
             </a>
           </div>

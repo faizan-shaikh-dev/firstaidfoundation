@@ -32,13 +32,13 @@ export default function About() {
       {/* Page Hero */}
       <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <ShieldCheck className="w-3.5 h-3.5 text-coral-400" />
               <span>Organization Overview • {BRAND_CONTENT.registrationNo}</span>
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               About First Aid Foundation
             </h1>
             <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
@@ -272,12 +272,12 @@ export default function About() {
 
       {/* 5. Founding Leadership Profile */}
       <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-4 flex justify-center">
               <div className="relative">
-                <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-3xl overflow-hidden border-4 border-forest-900/10 shadow-editorial-lg bg-forest-950">
+                <div className="w-44 h-44 sm:w-60 sm:h-60 rounded-3xl overflow-hidden border-4 border-forest-900/10 shadow-editorial-lg bg-forest-950">
                   <img
                     src={presidentProfile.image}
                     alt={presidentProfile.name}
@@ -297,11 +297,11 @@ export default function About() {
                 <span>Founding Leadership</span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900">
                 Led by Shakil Ahmed (Shakeel Hannan)
               </h2>
 
-              <p className="font-serif text-lg italic text-forest-800 leading-relaxed">
+              <p className="font-serif text-base sm:text-lg italic text-forest-800 leading-relaxed">
                 "{presidentProfile.quote}"
               </p>
 
@@ -314,17 +314,17 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="pt-4 flex flex-wrap items-center gap-4 text-xs font-semibold">
+              <div className="pt-4 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 text-xs font-semibold">
                 <a
                   href={`tel:${presidentProfile.phone.replace(/[^0-9+]/g, '')}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-forest-900 text-white hover:bg-forest-800 transition-colors"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-forest-900 text-white hover:bg-forest-800 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-coral-400" />
                   <span>Call President: {presidentProfile.phone}</span>
                 </a>
                 <Link
                   to="/team"
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ivory text-navy-900 border border-ivory-border hover:bg-ivory-warm transition-colors"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-ivory text-navy-900 border border-ivory-border hover:bg-ivory-warm transition-colors"
                 >
                   <Users className="w-3.5 h-3.5 text-coral-600" />
                   <span>Meet Full Board of Trustees →</span>
@@ -393,17 +393,17 @@ export default function About() {
           <p className="text-forest-200 text-base max-w-2xl mx-auto leading-relaxed">
             Whether through financial donations, medical sponsorship, or grassroots volunteering, your support changes lives.
           </p>
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/donate"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
             >
               <Heart className="w-5 h-5 fill-current" />
               <span>Donate Now</span>
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
             >
               <span>Contact Our Team</span>
             </Link>

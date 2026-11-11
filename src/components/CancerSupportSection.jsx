@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Pill, Shirt, Utensils, Milk, ShoppingBag, Accessibility, HelpCircle, Waves, CheckCircle2, ShieldAlert } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import Button from './Button';

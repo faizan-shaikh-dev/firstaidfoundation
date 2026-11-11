@@ -60,9 +60,9 @@ export default function Navbar() {
       </a>
 
       {/* Top Humanitarian Trust Bar */}
-      <div className="bg-forest-950 text-forest-100 border-b border-forest-800/80 text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+      <div className="bg-forest-950 text-forest-100 border-b border-forest-800/80 text-[11px] sm:text-xs">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-1.5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-0.5">
             <span className="inline-flex items-center gap-1.5 font-medium text-emerald-300">
               <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
               <span>{BRAND_CONTENT.registrationNo}</span>
@@ -73,13 +73,13 @@ export default function Navbar() {
             </span>
           </div>
 
-          <div className="flex items-center gap-4 ml-auto">
+          <div className="flex items-center gap-3 ml-auto">
             <a
               href={`tel:${BRAND_CONTENT.contact.phoneRaw}`}
               className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-coral-300 transition-colors"
               aria-label="Call First Aid Foundation emergency helpline"
             >
-              <Phone className="w-3.5 h-3.5 text-coral-400" />
+              <Phone className="w-3.5 h-3.5 text-coral-400 shrink-0" />
               <span>Helpline: {BRAND_CONTENT.contact.phoneDisplay}</span>
             </a>
           </div>
@@ -94,17 +94,17 @@ export default function Navbar() {
             : 'bg-white border-b border-ivory-border'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
             
             {/* Brand Logo & Identity */}
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-3 group shrink-0"
+              className="flex items-center gap-2 sm:gap-3 group min-w-0 max-w-[calc(100%-110px)] sm:max-w-none"
               aria-label="First Aid Foundation Home"
             >
-              <div className="w-12 h-12 rounded-2xl bg-ivory-warm p-1.5 border border-ivory-border shadow-2xs group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-ivory-warm p-1 sm:p-1.5 border border-ivory-border shadow-2xs group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
                 <img
                   src="/logo.png"
                   alt="First Aid Foundation Official Emblem"
@@ -113,11 +113,11 @@ export default function Navbar() {
                   height={44}
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-lg sm:text-xl text-navy-900 group-hover:text-forest-900 transition-colors leading-tight">
+              <div className="flex flex-col min-w-0">
+                <span className="font-serif font-bold text-sm sm:text-lg lg:text-xl text-navy-900 group-hover:text-forest-900 transition-colors leading-tight truncate">
                   First Aid Foundation
                 </span>
-                <span className="text-[11px] font-bold text-coral-600 tracking-wider uppercase">
+                <span className="text-[10px] sm:text-[11px] font-bold text-coral-600 tracking-wider uppercase truncate hidden xs:block">
                   {BRAND_CONTENT.tagline}
                 </span>
               </div>
@@ -174,7 +174,7 @@ export default function Navbar() {
               <Link
                 to="/donate"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-coral-600 hover:bg-coral-700 text-white font-bold text-xs shadow-sm"
+                className="inline-flex items-center gap-1 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg bg-coral-600 hover:bg-coral-700 text-white font-bold text-xs shadow-xs shrink-0"
               >
                 <Heart className="w-3.5 h-3.5 fill-current shrink-0" />
                 <span>Donate</span>
@@ -185,7 +185,7 @@ export default function Navbar() {
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-navigation-drawer"
                 aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                className="p-2 rounded-xl text-forest-900 bg-ivory-warm hover:bg-forest-100 border border-ivory-border transition-colors cursor-pointer"
+                className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl text-forest-900 bg-ivory-warm hover:bg-forest-100 border border-ivory-border transition-colors cursor-pointer shrink-0"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -197,7 +197,7 @@ export default function Navbar() {
             <nav
               id="mobile-navigation-drawer"
               aria-label="Mobile Navigation"
-              className="lg:hidden mt-2 pt-3 pb-5 border-t border-ivory-border bg-white rounded-2xl shadow-editorial-lg px-4 space-y-1.5 animate-fade-up"
+              className="lg:hidden mt-2 pt-3 pb-5 border-t border-ivory-border bg-white rounded-2xl shadow-editorial-lg px-3 sm:px-4 space-y-1.5 animate-fade-up"
             >
               {NAV_ROUTES.map((route) => {
                 const active = isRouteActive(route.path);
@@ -207,7 +207,7 @@ export default function Navbar() {
                     to={route.path}
                     onClick={() => setMobileMenuOpen(false)}
                     aria-current={active ? 'page' : undefined}
-                    className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                    className={`flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-colors ${
                       active
                         ? 'bg-forest-900 text-white font-bold'
                         : 'text-navy-800 hover:bg-ivory-warm'
@@ -215,9 +215,9 @@ export default function Navbar() {
                   >
                     <span className="flex items-center gap-2">
                       {route.path === '/activities/khandesh-house' && (
-                        <Building2 className="w-4 h-4 text-coral-500" />
+                        <Building2 className="w-4 h-4 text-coral-500 shrink-0" />
                       )}
-                      {route.name}
+                      <span>{route.name}</span>
                     </span>
                     {route.badge && (
                       <span
@@ -236,9 +236,9 @@ export default function Navbar() {
                 <Link
                   to="/donate"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm sm:text-base shadow-md"
                 >
-                  <Heart className="w-4 h-4 fill-current" />
+                  <Heart className="w-4 h-4 fill-current shrink-0" />
                   <span>Donate Now — Save a Life</span>
                 </Link>
                 <div className="flex items-center justify-center px-2 pt-1 text-xs text-navy-600">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Smartphone, ShieldCheck, Download, Check } from 'lucide-react';
 
 export default function QRDonation() {

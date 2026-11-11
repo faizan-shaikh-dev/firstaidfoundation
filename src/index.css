@@ -60,6 +60,8 @@
   --shadow-editorial: 0 4px 24px -4px rgba(15, 53, 43, 0.06), 0 2px 8px -2px rgba(15, 26, 44, 0.04);
   --shadow-editorial-lg: 0 16px 40px -8px rgba(15, 53, 43, 0.10), 0 4px 12px -2px rgba(15, 26, 44, 0.05);
   --shadow-coral-glow: 0 8px 24px -4px rgba(224, 72, 59, 0.35);
+
+  --breakpoint-xs: 24rem;
 }
 
 :root {
@@ -70,16 +72,43 @@
   --color-ivory: #FAF8F4;
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #0F1A2C;
   background-color: #FAF8F4;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure images, media, and iframes never cause horizontal overflow */
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+input, select, textarea, button {
+  max-width: 100%;
 }
 
 h1, h2, .font-editorial {
   font-family: 'Fraunces', Georgia, serif;
   letter-spacing: -0.02em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Accessible keyboard focus ring */

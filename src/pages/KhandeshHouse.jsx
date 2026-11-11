@@ -60,7 +60,7 @@ export default function KhandeshHouse() {
       {/* Breadcrumb & Hero */}
       <section className="bg-forest-950 text-white py-14 lg:py-20 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <Link
             to="/activities"
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-300 hover:text-white mb-6 transition-colors"
@@ -69,34 +69,34 @@ export default function KhandeshHouse() {
             <span>Back to All Activities</span>
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
                 <Building2 className="w-3.5 h-3.5" />
                 <span>Flagship Infrastructure Project • Mumbai</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 {KHANDESH_HOUSE_DETAILS.title}
               </h1>
-              <p className="text-lg sm:text-2xl text-emerald-300 font-serif italic">
+              <p className="text-base sm:text-2xl text-emerald-300 font-serif italic">
                 {KHANDESH_HOUSE_DETAILS.subtitle}
               </p>
               <p className="text-base sm:text-lg text-forest-100 leading-relaxed max-w-2xl">
                 {KHANDESH_HOUSE_DETAILS.purpose}
               </p>
 
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
                 <a
                   href="#sponsor-khandesh-house"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm sm:text-base shadow-coral-glow transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm sm:text-base shadow-coral-glow transition-all"
                 >
                   <Heart className="w-5 h-5 fill-current" />
                   <span>Contribute to Project Target</span>
                 </a>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-bold text-sm sm:text-base transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-bold text-sm sm:text-base transition-all"
                 >
                   <span>Inquire About Sponsorship</span>
                 </Link>
@@ -105,7 +105,7 @@ export default function KhandeshHouse() {
 
             {/* Project Target Card */}
             <div className="lg:col-span-5">
-              <div className="bg-forest-900/95 rounded-3xl p-6 sm:p-8 border border-forest-700 shadow-editorial-lg space-y-6">
+              <div className="bg-forest-900/95 rounded-3xl p-4 sm:p-6 lg:p-8 border border-forest-700 shadow-editorial-lg space-y-5 sm:space-y-6">
                 <div className="flex items-center justify-between border-b border-forest-800 pb-4">
                   <span className="text-xs font-bold uppercase tracking-widest text-emerald-300">
                     Project Funding Target
@@ -119,10 +119,10 @@ export default function KhandeshHouse() {
                   <span className="text-xs text-forest-200 block mb-1">
                     Estimated Total Project Cost:
                   </span>
-                  <div className="font-serif text-4xl sm:text-5xl font-bold text-white tracking-tight">
+                  <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
                     {KHANDESH_HOUSE_DETAILS.targetCostFormatted}
                   </div>
-                  <span className="text-sm font-semibold text-coral-300 block mt-1">
+                  <span className="text-xs sm:text-sm font-semibold text-coral-300 block mt-1 break-words">
                     {KHANDESH_HOUSE_DETAILS.targetCostWords}
                   </span>
                 </div>
@@ -132,7 +132,7 @@ export default function KhandeshHouse() {
                     <span className="text-[10px] uppercase font-bold text-forest-300 block">
                       Target Capacity
                     </span>
-                    <span className="font-serif text-lg font-bold text-white block mt-0.5">
+                    <span className="font-serif text-base sm:text-lg font-bold text-white block mt-0.5">
                       15 Beds
                     </span>
                   </div>
@@ -140,7 +140,7 @@ export default function KhandeshHouse() {
                     <span className="text-[10px] uppercase font-bold text-forest-300 block">
                       Building Plan
                     </span>
-                    <span className="font-serif text-lg font-bold text-white block mt-0.5">
+                    <span className="font-serif text-base sm:text-lg font-bold text-white block mt-0.5">
                       2-Storey
                     </span>
                   </div>

@@ -55,15 +55,15 @@ export default function Team() {
       />
 
       {/* Page Hero */}
-      <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
+      <section className="bg-forest-950 text-white py-14 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <Users className="w-3.5 h-3.5 text-coral-400" />
               <span>Dedicated Leadership & Trust Governance</span>
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               {teamDescription.headline}
             </h1>
             <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
@@ -74,31 +74,31 @@ export default function Team() {
       </section>
 
       {/* 1. Founder & President Spotlight Card */}
-      <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 space-y-3">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Sparkles className="w-3.5 h-3.5 text-coral-600" />
               <span>Founding Vision</span>
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900">
               Foundation President
             </h2>
           </div>
 
-          <div className="bg-ivory rounded-3xl p-8 sm:p-12 border border-ivory-border shadow-editorial-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="bg-ivory rounded-3xl p-4 sm:p-8 lg:p-12 border border-ivory-border shadow-editorial-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               
               <div className="lg:col-span-4 flex justify-center">
                 <div className="relative">
-                  <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-forest-950">
+                  <div className="w-44 h-44 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-forest-950">
                     <img
                       src={presidentProfile.image}
                       alt={presidentProfile.name}
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
-                  <span className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 bg-coral-600 text-white px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-md flex items-center gap-1.5">
+                  <span className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 bg-coral-600 text-white px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-md flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Founder & President</span>
                   </span>
@@ -110,7 +110,7 @@ export default function Team() {
                   <span className="text-xs font-bold uppercase tracking-wider text-teal-800 block">
                     Chief Humanitarian Officer & Founder
                   </span>
-                  <h3 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mt-1">
+                  <h3 className="font-serif text-2xl sm:text-4xl font-bold text-navy-900 mt-1">
                     {presidentProfile.name}
                   </h3>
                   <span className="text-xs text-navy-600 font-semibold block mt-1">
@@ -118,7 +118,7 @@ export default function Team() {
                   </span>
                 </div>
 
-                <blockquote className="p-4 rounded-2xl bg-white border-l-4 border-coral-600 shadow-2xs font-serif italic text-navy-800 text-base leading-relaxed">
+                <blockquote className="p-4 rounded-2xl bg-white border-l-4 border-coral-600 shadow-2xs font-serif italic text-navy-800 text-sm sm:text-base leading-relaxed">
                   "{presidentProfile.quote}"
                 </blockquote>
 
@@ -134,20 +134,20 @@ export default function Team() {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-ivory-border flex flex-wrap items-center gap-4 text-xs font-semibold">
+                <div className="pt-4 border-t border-ivory-border flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 text-xs font-semibold">
                   <a
                     href={`tel:${presidentProfile.phone.replace(/[^0-9+]/g, '')}`}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white transition-colors shadow-coral-glow"
+                    className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white transition-colors shadow-coral-glow truncate"
                   >
-                    <Phone className="w-4 h-4" />
-                    <span>Direct Helpline: {presidentProfile.phone}</span>
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <span className="truncate">Direct Helpline: {presidentProfile.phone}</span>
                   </a>
                   <a
                     href={`mailto:${presidentProfile.email}`}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-navy-900 border border-ivory-border hover:bg-ivory-warm transition-colors"
+                    className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-navy-900 border border-ivory-border hover:bg-ivory-warm transition-colors truncate"
                   >
-                    <Mail className="w-4 h-4 text-coral-600" />
-                    <span>{presidentProfile.email}</span>
+                    <Mail className="w-4 h-4 text-coral-600 shrink-0" />
+                    <span className="truncate">{presidentProfile.email}</span>
                   </a>
                 </div>
               </div>
@@ -272,16 +272,16 @@ export default function Team() {
             We are always looking for compassionate individuals in Mumbai, Jalgaon, and surrounding districts to guide arriving patients, distribute daily nutrition, or coordinate medicine aid.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all"
             >
               <span>Apply as a Volunteer</span>
             </Link>
             <Link
               to="/donate"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-forest-900 hover:bg-forest-800 text-white border border-forest-700 font-semibold text-base transition-all"
             >
               <Heart className="w-4 h-4 fill-current text-coral-400" />
               <span>Support Our Field Staff</span>

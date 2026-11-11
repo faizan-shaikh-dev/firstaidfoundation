@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, Bed, Bath, UtensilsCrossed, Heart, ArrowRight, ShieldCheck } from 'lucide-react';
 import { khandeshHouseData } from '../data/projects';
 import Button from './Button';

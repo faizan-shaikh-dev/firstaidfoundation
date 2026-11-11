@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { bankDetailsData } from '../data/donation';
 import { Copy, Check, Building2, ShieldCheck } from 'lucide-react';
 

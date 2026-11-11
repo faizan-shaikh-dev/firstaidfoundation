@@ -48,25 +48,25 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
               </span>
             </div>
 
-            <div className="absolute bottom-4 left-6 right-6">
+            <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-6">
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 block">
                 Mumbai Hospital Corridor Initiative
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-0.5">
+              <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-white mt-0.5">
                 {KHANDESH_HOUSE_DETAILS.title} — Free Stay Facility
               </h3>
             </div>
           </div>
 
           {/* Target Funding Box */}
-          <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
+          <div className="p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-5 flex-1 flex flex-col justify-between">
             <p className="text-sm text-forest-100 leading-relaxed">
               {KHANDESH_HOUSE_DETAILS.purpose}
             </p>
 
-            <div className="p-5 rounded-2xl bg-forest-900/90 border border-forest-700/80 space-y-2">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+            <div className="p-4 sm:p-5 rounded-2xl bg-forest-900/90 border border-forest-700/80 space-y-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-300">
                   Estimated Project Funding Target
                 </span>
                 <span className="px-2 py-0.5 rounded bg-coral-600/30 text-coral-300 border border-coral-500/30 text-[10px] font-bold uppercase">
@@ -74,11 +74,11 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
                 </span>
               </div>
 
-              <div className="flex items-baseline gap-2.5">
-                <span className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
                   {KHANDESH_HOUSE_DETAILS.targetCostFormatted}
                 </span>
-                <span className="text-xs text-forest-200 font-medium">
+                <span className="text-xs text-forest-200 font-medium break-words">
                   ({KHANDESH_HOUSE_DETAILS.targetCostWords})
                 </span>
               </div>
@@ -92,7 +92,7 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
         </div>
 
         {/* Right Specifications & Narrative Column */}
-        <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-white">
+        <div className="lg:col-span-7 p-4 sm:p-6 lg:p-10 flex flex-col justify-between bg-white">
           <div className="space-y-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-teal-800 block mb-1">
@@ -131,24 +131,24 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
             </div>
           </div>
 
-          <div className="pt-8 mt-6 border-t border-ivory-border flex flex-wrap items-center justify-between gap-4">
+          <div className="pt-6 sm:pt-8 mt-6 border-t border-ivory-border">
             {!detailed ? (
-              <>
+              <div className="w-full flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
                 <Link
                   to="/activities/khandesh-house"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-forest-900 hover:text-coral-600 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-forest-900 hover:text-coral-600 transition-colors"
                 >
                   <span>Explore Full Khandesh House Blueprint</span>
-                  <ArrowRight className="w-4 h-4 text-coral-600" />
+                  <ArrowRight className="w-4 h-4 text-coral-600 shrink-0" />
                 </Link>
                 <Link
                   to="/donate"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
                 >
-                  <Heart className="w-4 h-4 fill-current" />
+                  <Heart className="w-4 h-4 fill-current shrink-0" />
                   <span>Sponsor Khandesh House</span>
                 </Link>
-              </>
+              </div>
             ) : (
               <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
                 <span className="text-xs text-navy-600">

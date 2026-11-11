@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, Trees, Stethoscope, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

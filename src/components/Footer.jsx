@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="bg-forest-950 text-ivory border-t-4 border-coral-600">
       {/* Upper Editorial Banner */}
       <div className="border-b border-forest-800/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-2">
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-coral-400">
@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Columns */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           
           {/* Column 1: Brand & Mission */}
@@ -224,9 +224,9 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-forest-900 bg-forest-950/95 py-6 text-xs text-forest-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p>© {currentYear} First Aid Foundation. All Rights Reserved. Reg. No. F-16650/Jal.</p>
-          <div className="flex items-center gap-4 text-forest-400">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-3 gap-y-1 text-forest-400 text-center sm:text-right">
             <span>Humanitarian Healthcare Organization</span>
             <span>•</span>
             <span className="text-emerald-400 font-medium">100% Patient Relief Allocation</span>

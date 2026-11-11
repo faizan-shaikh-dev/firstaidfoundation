@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { impactStatsData } from '../data/stats';
 import { Users, Building2, Home, Stethoscope } from 'lucide-react';
 

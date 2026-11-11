@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, ArrowRight, ShieldCheck, Activity, Users } from 'lucide-react';
 import Button from './Button';
 
