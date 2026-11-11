@@ -61,15 +61,15 @@ export default function Donate() {
       <section className="bg-forest-950 text-white py-14 lg:py-20 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
+          <div className="max-w-3xl space-y-5 gsap-hero-group">
+            <span className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
               <Heart className="w-3.5 h-3.5 fill-current" />
               <span>Direct Medical Relief & Sadaqah Fund</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Donate for Timely Medical Assistance
             </h1>
-            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+            <p className="gsap-hero-item text-base sm:text-xl text-forest-100 leading-relaxed">
               Your contribution saves lives by providing urgent healthcare, free shelter at Khandesh
               House, life-saving medicines, and compassionate support to families enduring medical
               emergencies.
@@ -81,7 +81,7 @@ export default function Donate() {
       {/* 1. Bank Transfer & Official UPI QR Slot (Primary Action Section) */}
       <section className="py-14 sm:py-16 lg:py-22 bg-ivory border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
-          <div className="max-w-3xl space-y-2">
+          <div className="max-w-3xl space-y-2 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Official Direct Remittance Channels</span>
@@ -113,7 +113,7 @@ export default function Donate() {
         className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border"
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3">
+          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
               <span>Where Your Contribution Goes</span>
             </span>
@@ -128,11 +128,11 @@ export default function Donate() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 gsap-card-group">
             {DONATION_PURPOSES.map((purpose) => (
               <div
                 key={purpose.id}
-                className="bg-ivory rounded-3xl p-5 sm:p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
+                className="card-hover-editorial bg-ivory rounded-3xl p-5 sm:p-7 border border-ivory-border shadow-editorial flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-2xl bg-white border border-ivory-border flex items-center justify-center shadow-2xs">
@@ -165,7 +165,7 @@ export default function Donate() {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-7 space-y-5">
+            <div className="lg:col-span-7 space-y-5 gsap-fade-up">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                 <Sparkles className="w-3.5 h-3.5 text-coral-600" />
                 <span>Humanitarian Charity & Sadaqah</span>
@@ -189,7 +189,7 @@ export default function Donate() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-8 border border-ivory-border shadow-editorial space-y-4">
+            <div className="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-8 border border-ivory-border shadow-editorial space-y-4 gsap-fade-up card-hover-editorial">
               <h3 className="font-serif text-xl font-bold text-navy-900">
                 Donation Impact Guarantee
               </h3>
@@ -220,7 +220,7 @@ export default function Donate() {
       {/* 4. Step-by-Step Mobile Giving Instructions */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3">
+          <div className="max-w-3xl mb-10 sm:mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Smartphone className="w-3.5 h-3.5 text-coral-600" />
               <span>Easy 4-Step Guide</span>
@@ -233,11 +233,11 @@ export default function Donate() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 gsap-card-group">
             {mobileSteps.map((s) => (
               <div
                 key={s.step}
-                className="p-5 sm:p-6 rounded-2xl bg-ivory border border-ivory-border space-y-3 flex flex-col justify-between"
+                className="card-hover-editorial p-5 sm:p-6 rounded-2xl bg-ivory border border-ivory-border space-y-3 flex flex-col justify-between"
               >
                 <div>
                   <span className="font-mono text-xs font-bold text-coral-600 block mb-2">
@@ -258,7 +258,7 @@ export default function Donate() {
 
       {/* 5. Helpline Reassurance Banner */}
       <section className="py-14 sm:py-16 bg-forest-950 text-white text-center">
-        <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4">
+        <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4 gsap-fade-up">
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
             Need Assistance with Your Remittance?
           </h2>

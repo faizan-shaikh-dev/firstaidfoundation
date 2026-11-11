@@ -35,7 +35,7 @@ export function BankTransferCard() {
   return (
     <div
       id="bank-transfer"
-      className="bg-white rounded-3xl border border-ivory-border shadow-editorial p-4 sm:p-6 lg:p-8 relative overflow-hidden"
+      className="gsap-fade-up card-hover-editorial bg-white rounded-3xl border border-ivory-border shadow-editorial p-4 sm:p-6 lg:p-8 relative overflow-hidden"
     >
       {/* Top Accent Bar */}
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-forest-800" />
@@ -223,7 +223,7 @@ export function UpiQrCard() {
   return (
     <div
       id="upi-donation"
-      className="bg-white rounded-3xl border border-ivory-border shadow-editorial p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full space-y-6 relative overflow-hidden"
+      className="gsap-fade-up card-hover-editorial bg-white rounded-3xl border border-ivory-border shadow-editorial p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full space-y-6 relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-coral-600" />
 

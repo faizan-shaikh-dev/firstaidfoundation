@@ -88,15 +88,15 @@ export default function Contact() {
       <section className="bg-forest-950 text-white py-14 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+          <div className="max-w-3xl space-y-5 gsap-hero-group">
+            <span className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <Phone className="w-3.5 h-3.5 text-coral-400" />
               <span>Reach Our Team • Emergency & Inquiries</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               {BRAND_CONTENT.contact.heading}
             </h1>
-            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+            <p className="gsap-hero-item text-base sm:text-xl text-forest-100 leading-relaxed">
               {BRAND_CONTENT.contact.subheading}
             </p>
           </div>
@@ -106,10 +106,10 @@ export default function Contact() {
       {/* 1. Contact Information Cards */}
       <section className="py-14 sm:py-16 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 gsap-card-group">
             
             {/* Headquarters Card */}
-            <div className="p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
+            <div className="card-hover-editorial p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-forest-50 border border-forest-200 text-forest-800 flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-coral-600" />
               </div>
@@ -125,7 +125,7 @@ export default function Contact() {
             </div>
 
             {/* Helpline Card */}
-            <div className="p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
+            <div className="card-hover-editorial p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-coral-50 border border-coral-200 text-coral-600 flex items-center justify-center">
                 <Phone className="w-6 h-6" />
               </div>
@@ -146,7 +146,7 @@ export default function Contact() {
             </div>
 
             {/* Email & Coordination Card */}
-            <div className="p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
+            <div className="card-hover-editorial p-5 sm:p-8 rounded-3xl bg-ivory border border-ivory-border shadow-editorial space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-200 text-teal-800 flex items-center justify-center">
                 <Mail className="w-6 h-6" />
               </div>
@@ -176,7 +176,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Contact Form */}
-            <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-ivory-border shadow-editorial-lg space-y-6">
+            <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-ivory-border shadow-editorial-lg space-y-6 gsap-fade-up">
               <div>
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200 mb-2">
                   <Send className="w-3.5 h-3.5 text-coral-600" />
@@ -332,7 +332,7 @@ export default function Contact() {
             </div>
 
             {/* Right Map & Hospital Network Card */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-5 space-y-6 gsap-fade-up">
               
               {/* Google Maps Embed */}
               <div className="bg-white rounded-3xl p-3 border border-ivory-border shadow-editorial-lg overflow-hidden space-y-3">

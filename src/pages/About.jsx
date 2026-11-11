@@ -33,15 +33,15 @@ export default function About() {
       <section className="bg-forest-950 text-white py-16 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+          <div className="max-w-3xl space-y-5 gsap-hero-group">
+            <span className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <ShieldCheck className="w-3.5 h-3.5 text-coral-400" />
               <span>Organization Overview • {BRAND_CONTENT.registrationNo}</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               About First Aid Foundation
             </h1>
-            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+            <p className="gsap-hero-item text-base sm:text-xl text-forest-100 leading-relaxed">
               Dedicated to building a healthier, more compassionate society through accessible
               medical support, hospital navigation, and emergency relief.
             </p>
@@ -54,7 +54,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 gsap-fade-up">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                 <span>Who We Are</span>
               </span>
@@ -98,7 +98,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 gsap-photo-reveal">
               <figure className="rounded-3xl overflow-hidden border border-ivory-border shadow-editorial-lg bg-forest-950">
                 <img
                   src="/images/hero-healthcare.jpg"
@@ -125,7 +125,7 @@ export default function About() {
       {/* 2. Mission, Vision, and Ground Approach */}
       <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <span>Organizational Foundation</span>
             </span>
@@ -137,8 +137,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-card-group">
+            <div className="card-hover-editorial bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-coral-50 border border-coral-200 text-coral-600 flex items-center justify-center">
                   <Target className="w-6 h-6" />
@@ -155,7 +155,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
+            <div className="card-hover-editorial bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-200 text-teal-800 flex items-center justify-center">
                   <Eye className="w-6 h-6" />
@@ -172,7 +172,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
+            <div className="card-hover-editorial bg-white rounded-3xl p-8 border border-ivory-border shadow-editorial space-y-4 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-forest-50 border border-forest-200 text-forest-800 flex items-center justify-center">
                   <Compass className="w-6 h-6" />
@@ -195,7 +195,7 @@ export default function About() {
       {/* 3. 4 Core Values: Compassion, Transparency, Community Collaboration, Sustainability */}
       <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Sparkles className="w-3.5 h-3.5 text-coral-600" />
               <span>Ethical Pillars</span>
@@ -208,11 +208,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 gsap-card-group">
             {BRAND_CONTENT.coreValues.map((val, idx) => (
               <div
                 key={val.id}
-                className="p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-forest-400 transition-all space-y-3 flex flex-col justify-between"
+                className="card-hover-editorial p-6 rounded-2xl bg-ivory border border-ivory-border space-y-3 flex flex-col justify-between"
               >
                 <div>
                   <span className="font-mono text-xs font-bold text-coral-600 block mb-2">
@@ -234,7 +234,7 @@ export default function About() {
       {/* 4. Scriptural Inspiration (Quran 5:32 & 5:2) */}
       <section className="py-20 bg-teal-950 text-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3 gsap-fade-up">
             <BookOpen className="w-8 h-8 text-emerald-300 mx-auto" />
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
               Guiding Ethos & Universal Humanitarian Duty
@@ -244,11 +244,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gsap-card-group">
             {BRAND_CONTENT.quranicReferences.map((ref) => (
               <blockquote
                 key={ref.id}
-                className="bg-teal-900/60 rounded-3xl p-8 border border-teal-800 shadow-editorial-lg flex flex-col justify-between space-y-4"
+                className="card-hover-editorial bg-teal-900/60 rounded-3xl p-8 border border-teal-800 shadow-editorial-lg flex flex-col justify-between space-y-4"
               >
                 <div className="space-y-3">
                   <span className="px-3 py-1 rounded-full bg-teal-950 text-emerald-300 text-xs font-bold uppercase tracking-wider inline-block">
@@ -275,7 +275,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-4 flex justify-center">
+            <div className="lg:col-span-4 flex justify-center gsap-photo-reveal">
               <div className="relative">
                 <div className="w-44 h-44 sm:w-60 sm:h-60 rounded-3xl overflow-hidden border-4 border-forest-900/10 shadow-editorial-lg bg-forest-950">
                   <img
@@ -291,7 +291,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="lg:col-span-8 space-y-5">
+            <div className="lg:col-span-8 space-y-5 gsap-fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                 <Sparkles className="w-3.5 h-3.5 text-coral-600" />
                 <span>Founding Leadership</span>
@@ -339,7 +339,7 @@ export default function About() {
       {/* 6. Real Relief Work Gallery */}
       <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 space-y-3">
+          <div className="max-w-3xl mb-12 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Camera className="w-3.5 h-3.5 text-coral-600" />
               <span>Verifiable Field History</span>
@@ -352,11 +352,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gsap-card-group">
             {GROUND_IMPACTS.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl overflow-hidden border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col"
+                className="card-hover-editorial bg-white rounded-2xl overflow-hidden border border-ivory-border shadow-editorial flex flex-col"
               >
                 <div className="h-52 overflow-hidden relative bg-forest-950">
                   <img
@@ -386,7 +386,7 @@ export default function About() {
 
       {/* 7. Support CTA */}
       <section className="py-16 bg-forest-950 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 gsap-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
             Join Our Mission of Mercy & Healing
           </h2>

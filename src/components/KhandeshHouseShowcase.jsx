@@ -24,12 +24,12 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-ivory-border shadow-editorial-lg overflow-hidden">
+    <div className="bg-white rounded-3xl border border-ivory-border shadow-editorial-lg overflow-hidden gsap-fade-up">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         {/* Left Visual & Target Column */}
         <div className="lg:col-span-5 bg-forest-950 text-white flex flex-col justify-between relative overflow-hidden">
           {/* Documentary Shelter Photography */}
-          <div className="relative h-64 sm:h-72 lg:h-80 w-full overflow-hidden">
+          <div className="relative h-64 sm:h-72 lg:h-80 w-full overflow-hidden gsap-photo-reveal">
             <img
               src="/images/khandesh-shelter.jpg"
               alt="Illustrative architectural representation of the proposed 15-bed Khandesh House patient shelter in Mumbai"
@@ -104,11 +104,11 @@ export default function KhandeshHouseShowcase({ detailed = false }) {
             </div>
 
             {/* 6 Spec Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gsap-card-group">
               {KHANDESH_HOUSE_DETAILS.specs.map((spec) => (
                 <div
                   key={spec.id}
-                  className="p-4 rounded-2xl bg-ivory border border-ivory-border hover:border-forest-300 transition-colors flex items-start gap-3.5"
+                  className="p-4 rounded-2xl bg-ivory border border-ivory-border hover:border-forest-300 card-hover-editorial transition-colors flex items-start gap-3.5"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-ivory-border flex items-center justify-center shrink-0 shadow-2xs">
                     {iconMap[spec.id]}

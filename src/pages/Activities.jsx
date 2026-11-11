@@ -31,20 +31,20 @@ export default function Activities() {
       <section className="bg-forest-950 text-white py-14 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+          <div className="max-w-3xl space-y-5 gsap-hero-group">
+            <span className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <Stethoscope className="w-3.5 h-3.5 text-coral-400" />
               <span>Our Activities & Humanitarian Relief Work</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Ultimately, Your Support Empowers Lives
             </h1>
-            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+            <p className="gsap-hero-item text-base sm:text-xl text-forest-100 leading-relaxed">
               Medical emergencies, sudden accidents, and critical health challenges devastate
               low-income families financially and emotionally. Timely assistance, hospital guidance,
               free shelter, and medical relief restore dignity and life.
             </p>
-            <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
+            <div className="gsap-hero-item pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
               <Link
                 to="/donate"
                 className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm shadow-coral-glow transition-all"
@@ -70,7 +70,7 @@ export default function Activities() {
         className="py-20 lg:py-24 bg-white border-b border-ivory-border"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <span>Immediate Response Framework</span>
             </span>
@@ -86,11 +86,11 @@ export default function Activities() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 gsap-card-group">
             {ACTIVITIES_PILLARS.map((pillar) => (
               <article
                 key={pillar.id}
-                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial flex flex-col justify-between"
+                className="card-hover-editorial bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial flex flex-col justify-between"
               >
                 <div>
                   <figure className="relative h-52 overflow-hidden bg-forest-950">
@@ -142,7 +142,7 @@ export default function Activities() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 gsap-fade-up">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-800 text-emerald-300 text-xs font-bold uppercase tracking-widest border border-forest-700">
                 <TreePine className="w-3.5 h-3.5 text-coral-400" />
                 <span>Environmental & Preventive Public Health</span>
@@ -203,7 +203,7 @@ export default function Activities() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 gsap-photo-reveal">
               <figure className="rounded-3xl overflow-hidden border border-forest-700 shadow-editorial-lg bg-forest-950">
                 <img
                   src="/images/tree-bank.jpg"
@@ -242,7 +242,7 @@ export default function Activities() {
         className="py-20 lg:py-24 bg-ivory"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 gsap-fade-up">
             <div className="space-y-2 max-w-2xl">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
                 <span>Flagship Patient Shelter</span>
@@ -265,7 +265,7 @@ export default function Activities() {
 
       {/* 7. Final Action Banner */}
       <section className="py-16 bg-forest-950 text-white border-t border-forest-800 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 gsap-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
             Support Our Medical Relief Initiatives Today
           </h2>

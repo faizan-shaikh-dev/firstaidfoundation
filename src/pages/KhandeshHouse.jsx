@@ -70,23 +70,23 @@ export default function KhandeshHouse() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
+            <div className="lg:col-span-7 space-y-5 gsap-hero-group">
+              <div className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-600/20 border border-coral-500/40 text-coral-300 text-xs font-bold uppercase tracking-widest">
                 <Building2 className="w-3.5 h-3.5" />
                 <span>Flagship Infrastructure Project • Mumbai</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 {KHANDESH_HOUSE_DETAILS.title}
               </h1>
-              <p className="text-base sm:text-2xl text-emerald-300 font-serif italic">
+              <p className="gsap-hero-item text-base sm:text-2xl text-emerald-300 font-serif italic">
                 {KHANDESH_HOUSE_DETAILS.subtitle}
               </p>
-              <p className="text-base sm:text-lg text-forest-100 leading-relaxed max-w-2xl">
+              <p className="gsap-hero-item text-base sm:text-lg text-forest-100 leading-relaxed max-w-2xl">
                 {KHANDESH_HOUSE_DETAILS.purpose}
               </p>
 
-              <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
+              <div className="gsap-hero-item pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
                 <a
                   href="#sponsor-khandesh-house"
                   className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-sm sm:text-base shadow-coral-glow transition-all"
@@ -104,7 +104,7 @@ export default function KhandeshHouse() {
             </div>
 
             {/* Project Target Card */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 gsap-fade-up">
               <div className="bg-forest-900/95 rounded-3xl p-4 sm:p-6 lg:p-8 border border-forest-700 shadow-editorial-lg space-y-5 sm:space-y-6">
                 <div className="flex items-center justify-between border-b border-forest-800 pb-4">
                   <span className="text-xs font-bold uppercase tracking-widest text-emerald-300">
@@ -162,7 +162,7 @@ export default function KhandeshHouse() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 gsap-photo-reveal">
               <figure className="rounded-3xl overflow-hidden border border-ivory-border shadow-editorial-lg bg-forest-950">
                 <img
                   src="/images/khandesh-shelter.jpg"
@@ -182,7 +182,7 @@ export default function KhandeshHouse() {
               </figure>
             </div>
 
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-6 gsap-fade-up">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
                 <span>The Human Reality in Mumbai</span>
               </span>
@@ -212,7 +212,7 @@ export default function KhandeshHouse() {
       {/* 2. Full Architectural Specifications & Blueprint */}
       <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <span>Facility Blueprint & Standards</span>
             </span>
@@ -225,11 +225,11 @@ export default function KhandeshHouse() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gsap-card-group">
             {KHANDESH_HOUSE_DETAILS.specs.map((spec) => (
               <div
                 key={spec.id}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-ivory-border shadow-editorial space-y-3 hover:border-forest-300 transition-colors"
+                className="card-hover-editorial bg-white rounded-2xl p-6 sm:p-7 border border-ivory-border shadow-editorial space-y-3"
               >
                 <span className="text-xs font-bold uppercase tracking-wider text-teal-800 block">
                   {spec.label}
@@ -252,7 +252,7 @@ export default function KhandeshHouse() {
         className="py-20 lg:py-24 bg-white border-b border-ivory-border"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-50 text-coral-700 text-xs font-bold uppercase tracking-widest border border-coral-200">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Project Target Sponsorship Tiers</span>
@@ -266,11 +266,11 @@ export default function KhandeshHouse() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gsap-card-group">
             {sponsorshipTiers.map((tier) => (
               <div
                 key={tier.id}
-                className="bg-ivory rounded-3xl p-6 sm:p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
+                className="card-hover-editorial bg-ivory rounded-3xl p-6 sm:p-7 border border-ivory-border shadow-editorial flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between gap-2">
@@ -309,7 +309,7 @@ export default function KhandeshHouse() {
       {/* 4. Bank Transfer & Official UPI QR Code Widgets */}
       <section className="py-20 lg:py-24 bg-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          <div className="max-w-3xl space-y-2">
+          <div className="max-w-3xl space-y-2 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Direct Project Remittance Channels</span>

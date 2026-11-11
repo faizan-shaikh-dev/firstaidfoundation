@@ -25,7 +25,7 @@ export default function ImpactStatsSection() {
       <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12 gsap-fade-up">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -46,7 +46,7 @@ export default function ImpactStatsSection() {
         </div>
 
         {/* 4 Stat Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 gsap-card-group">
           {IMPACT_STATS.map((stat) => {
             const isVerifiedNumber =
               stat.verified && stat.value !== null && Number(stat.value) > 0;
@@ -54,7 +54,7 @@ export default function ImpactStatsSection() {
             return (
               <div
                 key={stat.id}
-                className="bg-forest-900/90 backdrop-blur-xs rounded-2xl p-4 sm:p-6 lg:p-7 border border-forest-800 flex flex-col justify-between hover:border-forest-600 transition-colors"
+                className="bg-forest-900/90 backdrop-blur-xs rounded-2xl p-4 sm:p-6 lg:p-7 border border-forest-800 flex flex-col justify-between card-hover-editorial hover:border-forest-600 transition-colors"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4 sm:mb-5">

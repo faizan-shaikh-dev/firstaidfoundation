@@ -58,15 +58,15 @@ export default function Team() {
       <section className="bg-forest-950 text-white py-14 lg:py-22 relative overflow-hidden border-b border-forest-800">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+          <div className="max-w-3xl space-y-5 gsap-hero-group">
+            <span className="gsap-hero-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
               <Users className="w-3.5 h-3.5 text-coral-400" />
               <span>Dedicated Leadership & Trust Governance</span>
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="gsap-hero-item font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               {teamDescription.headline}
             </h1>
-            <p className="text-base sm:text-xl text-forest-100 leading-relaxed">
+            <p className="gsap-hero-item text-base sm:text-xl text-forest-100 leading-relaxed">
               {teamDescription.paragraphs[0]}
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Team() {
       {/* 1. Founder & President Spotlight Card */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
+          <div className="max-w-3xl mb-10 sm:mb-12 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <Sparkles className="w-3.5 h-3.5 text-coral-600" />
               <span>Founding Vision</span>
@@ -86,10 +86,10 @@ export default function Team() {
             </h2>
           </div>
 
-          <div className="bg-ivory rounded-3xl p-4 sm:p-8 lg:p-12 border border-ivory-border shadow-editorial-lg">
+          <div className="bg-ivory rounded-3xl p-4 sm:p-8 lg:p-12 border border-ivory-border shadow-editorial-lg gsap-fade-up">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               
-              <div className="lg:col-span-4 flex justify-center">
+              <div className="lg:col-span-4 flex justify-center gsap-photo-reveal">
                 <div className="relative">
                   <div className="w-44 h-44 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-forest-950">
                     <img
@@ -160,7 +160,7 @@ export default function Team() {
       {/* 2. Board of Trustees */}
       <section className="py-20 lg:py-24 bg-ivory border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <ShieldCheck className="w-3.5 h-3.5 text-coral-600" />
               <span>Trust Governance</span>
@@ -173,11 +173,11 @@ export default function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 gsap-card-group">
             {trustees.map((member) => (
               <div
                 key={member.id}
-                className="bg-white rounded-3xl p-6 sm:p-7 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all flex flex-col justify-between"
+                className="card-hover-editorial bg-white rounded-3xl p-6 sm:p-7 border border-ivory-border shadow-editorial flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="w-14 h-14 rounded-2xl bg-forest-50 border border-forest-200 text-forest-800 flex items-center justify-center font-serif text-xl font-bold">
@@ -215,7 +215,7 @@ export default function Team() {
       {/* 3. Operational & Field Committee */}
       <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 space-y-3">
+          <div className="max-w-3xl mb-14 space-y-3 gsap-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <UserCheck className="w-3.5 h-3.5 text-coral-600" />
               <span>Ground Field Force</span>
@@ -228,11 +228,11 @@ export default function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gsap-card-group">
             {committeeMembers.map((item) => (
               <div
                 key={item.id}
-                className="p-6 rounded-2xl bg-ivory border border-ivory-border shadow-editorial flex flex-col justify-between space-y-3"
+                className="card-hover-editorial p-6 rounded-2xl bg-ivory border border-ivory-border shadow-editorial flex flex-col justify-between space-y-3"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -258,7 +258,7 @@ export default function Team() {
 
       {/* 4. Volunteer CTA */}
       <section className="py-20 bg-forest-950 text-white text-center relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10 gsap-fade-up">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 border border-forest-700 text-emerald-300 text-xs font-bold uppercase tracking-widest">
             <Heart className="w-3.5 h-3.5 text-coral-400 fill-current" />
             <span>Join Our Volunteer Network</span>

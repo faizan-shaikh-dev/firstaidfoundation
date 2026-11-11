@@ -44,25 +44,25 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Editorial Copy */}
-            <div className="lg:col-span-7 space-y-5 sm:space-y-6 animate-fade-up">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 text-ivory text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 gsap-hero-group">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 text-ivory text-xs sm:text-sm font-bold tracking-wide shadow-sm gsap-hero-item">
                 <span className="w-2 h-2 rounded-full bg-coral-400 animate-pulse" />
                 <span>{BRAND_CONTENT.organizationType}</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-bold text-navy-900 tracking-tight leading-[1.08]">
+              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-bold text-navy-900 tracking-tight leading-[1.08] gsap-hero-item">
                 Helping Grow{' '}
                 <span className="text-forest-800 underline decoration-coral-500/70 decoration-4 underline-offset-8">
                   Humanity
                 </span>
               </h1>
 
-              <p className="text-base sm:text-xl text-navy-700 leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-xl text-navy-700 leading-relaxed max-w-2xl font-normal gsap-hero-item">
                 {BRAND_CONTENT.missionStatement}
               </p>
 
               {/* Primary CTAs */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 gsap-hero-item">
                 <Link
                   to="/donate"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-coral-600 hover:bg-coral-700 text-white font-bold text-base shadow-coral-glow transition-all duration-200 active:scale-[0.99]"
@@ -80,8 +80,8 @@ export default function Home() {
               </div>
 
               {/* Three Quick Highlights: Direct Aid, Free Care, Community */}
-              <div className="pt-6 border-t border-ivory-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3">
+              <div className="pt-6 border-t border-ivory-border grid grid-cols-1 sm:grid-cols-3 gap-4 gsap-hero-item">
+                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3 card-hover-editorial">
                   <div className="w-10 h-10 rounded-xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0 mt-0.5">
                     <HeartHandshake className="w-5 h-5" />
                   </div>
@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3 card-hover-editorial">
                   <div className="w-10 h-10 rounded-xl bg-coral-50 text-coral-600 flex items-center justify-center shrink-0 mt-0.5">
                     <Stethoscope className="w-5 h-5" />
                   </div>
@@ -109,7 +109,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-white border border-ivory-border shadow-2xs flex items-start gap-3 card-hover-editorial">
                   <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-800 flex items-center justify-center shrink-0 mt-0.5">
                     <Users className="w-5 h-5" />
                   </div>
@@ -126,9 +126,9 @@ export default function Home() {
             </div>
 
             {/* Right Documentary Frame + Featured Khandesh House Callout */}
-            <div className="lg:col-span-5 space-y-4">
-              <div className="bg-white p-3 sm:p-4 rounded-3xl border border-ivory-border shadow-editorial-lg space-y-4">
-                <figure className="relative rounded-2xl overflow-hidden bg-forest-950">
+            <div className="lg:col-span-5 space-y-4 gsap-hero-visual">
+              <div className="bg-white p-3 sm:p-4 rounded-3xl border border-ivory-border shadow-editorial-lg space-y-4 card-hover-editorial">
+                <figure className="relative rounded-2xl overflow-hidden bg-forest-950 gsap-photo-reveal">
                   <img
                     src="/images/hero-healthcare.jpg"
                     alt="Documentary photograph of physician and foundation volunteer reviewing treatment records with elderly patient"
@@ -205,7 +205,7 @@ export default function Home() {
         className="py-20 lg:py-24 bg-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 gsap-fade-up">
             <div className="space-y-3 max-w-2xl">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                 <span>Core Foundation Pillars</span>
@@ -223,11 +223,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 gsap-card-group">
             {MAJOR_PROJECTS.map((project) => (
               <article
                 key={project.id}
-                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all duration-300 flex flex-col justify-between group"
+                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial hover:shadow-editorial-lg card-hover-editorial transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <figure className="relative h-56 overflow-hidden bg-forest-950">
@@ -297,7 +297,7 @@ export default function Home() {
         className="py-20 lg:py-24 bg-teal-950 text-white relative overflow-hidden"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-3 gsap-fade-up">
             <div className="w-12 h-12 rounded-2xl bg-teal-900 border border-teal-700 text-emerald-300 flex items-center justify-center mx-auto">
               <BookOpen className="w-6 h-6" />
             </div>
@@ -316,11 +316,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gsap-card-group">
             {BRAND_CONTENT.quranicReferences.map((item) => (
               <blockquote
                 key={item.id}
-                className="bg-teal-900/70 backdrop-blur-xs rounded-3xl p-5 sm:p-8 lg:p-10 border border-teal-800 shadow-editorial-lg flex flex-col justify-between"
+                className="bg-teal-900/70 backdrop-blur-xs rounded-3xl p-5 sm:p-8 lg:p-10 border border-teal-800 shadow-editorial-lg card-hover-editorial flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-teal-950/80 border border-teal-700 text-emerald-300 text-xs font-bold uppercase tracking-wider">
@@ -361,7 +361,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
             
             {/* Left Sadaqah & Humanitarian Giving Explanation */}
-            <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-ivory-border shadow-editorial flex flex-col justify-between space-y-6">
+            <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 lg:p-10 border border-ivory-border shadow-editorial flex flex-col justify-between space-y-6 gsap-fade-up">
               <div className="space-y-5">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                   <Sparkles className="w-3.5 h-3.5 text-coral-600" />
@@ -428,7 +428,7 @@ export default function Home() {
             </div>
 
             {/* Right UPI QR Section */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 gsap-fade-up">
               <UpiQrCard />
             </div>
 
@@ -439,7 +439,7 @@ export default function Home() {
       {/* REAL ON-GROUND RELIEF GALLERY (Documentary Proof of Impact) */}
       <section className="py-20 lg:py-24 bg-white border-b border-ivory-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 gsap-fade-up">
             <div className="space-y-3 max-w-2xl">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
                 <Camera className="w-3.5 h-3.5 text-coral-600" />
@@ -455,11 +455,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gsap-card-group">
             {GROUND_IMPACTS.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all duration-300 group flex flex-col"
+                className="bg-ivory rounded-3xl overflow-hidden border border-ivory-border shadow-editorial hover:shadow-editorial-lg card-hover-editorial transition-all duration-300 group flex flex-col"
               >
                 <div className="h-60 overflow-hidden relative bg-forest-950">
                   <img
@@ -562,7 +562,7 @@ export default function Home() {
       {/* 12. Final Strong Call to Action */}
       <section className="py-20 bg-gradient-to-br from-forest-900 via-forest-950 to-teal-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-editorial-dots pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6 gsap-fade-up">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-emerald-300 text-xs font-bold uppercase tracking-widest border border-white/15">
             <Heart className="w-3.5 h-3.5 fill-current text-coral-400" />
             <span>Every Contribution Protects a Life</span>

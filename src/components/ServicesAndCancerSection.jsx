@@ -59,7 +59,7 @@ export function ServicesGridSection() {
       className="py-16 sm:py-20 lg:py-24 bg-ivory relative"
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14 gsap-fade-up">
           <div className="max-w-2xl space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
               <span>9 Core Humanitarian Services</span>
@@ -78,7 +78,7 @@ export function ServicesGridSection() {
         </div>
 
         {/* 9 Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7 gsap-card-group">
           {MEDICAL_SERVICES.map((service) => {
             const accentStyles =
               service.accent === 'coral'
@@ -97,7 +97,7 @@ export function ServicesGridSection() {
             return (
               <article
                 key={service.id}
-                className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-ivory-border shadow-editorial hover:shadow-editorial-lg transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-ivory-border shadow-editorial hover:shadow-editorial-lg card-hover-editorial transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 ${topBorderColor}`} />
 
@@ -157,7 +157,7 @@ export function CancerSupportSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10 sm:mb-14">
           
           {/* Left Narrative */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-7 space-y-5 gsap-fade-up">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coral-50 border border-coral-200 text-coral-700 text-xs font-bold uppercase tracking-widest">
               <Activity className="w-3.5 h-3.5" />
               <span>Specialized Oncology Care Program</span>
@@ -199,7 +199,7 @@ export function CancerSupportSection() {
 
           {/* Right Documentary Image */}
           <div className="lg:col-span-5">
-            <figure className="relative rounded-2xl overflow-hidden border border-ivory-border shadow-editorial-lg bg-forest-950">
+            <figure className="relative rounded-2xl overflow-hidden border border-ivory-border shadow-editorial-lg bg-forest-950 gsap-photo-reveal">
               <img
                 src="/images/cancer-care.jpg"
                 alt="Documentary photograph of healthcare coordinator providing nutritional and medicine care kit to a patient caregiver"
@@ -220,11 +220,11 @@ export function CancerSupportSection() {
         </div>
 
         {/* 8-Item Care Package Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 gsap-card-group">
           {CANCER_SUPPORT_PACKAGE.map((item, idx) => (
             <div
               key={item.id}
-              className="p-4 sm:p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-forest-300 transition-all flex flex-col justify-between"
+              className="p-4 sm:p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-forest-300 card-hover-editorial transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
@@ -257,7 +257,7 @@ export function CommunityInterventionsSection() {
       className="py-16 sm:py-20 lg:py-24 bg-ivory-warm border-b border-ivory-border"
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-10 sm:mb-14 space-y-3">
+        <div className="max-w-3xl mb-10 sm:mb-14 space-y-3 gsap-fade-up">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/10 text-teal-900 text-xs font-bold uppercase tracking-widest border border-teal-800/20">
             <span>11 Grassroots Action Pillars</span>
           </span>
@@ -273,13 +273,13 @@ export function CommunityInterventionsSection() {
           </p>
         </div>
 
-        <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 gsap-card-group">
           {COMMUNITY_INTERVENTIONS.map((intervention, idx) => {
             const num = String(idx + 1).padStart(2, '0');
             return (
               <li
                 key={num}
-                className="bg-white rounded-2xl p-4 sm:p-6 border border-ivory-border shadow-editorial flex items-start gap-3 sm:gap-4 hover:border-forest-400 transition-colors"
+                className="bg-white rounded-2xl p-4 sm:p-6 border border-ivory-border shadow-editorial card-hover-editorial flex items-start gap-3 sm:gap-4 hover:border-forest-400 transition-colors"
               >
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-forest-900 text-white font-mono text-xs sm:text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {num}
@@ -292,7 +292,7 @@ export function CommunityInterventionsSection() {
           })}
 
           {/* 12th Card: Direct Action CTA */}
-          <li className="bg-forest-900 text-white rounded-2xl p-4 sm:p-6 border border-forest-800 shadow-editorial flex flex-col justify-between">
+          <li className="bg-forest-900 text-white rounded-2xl p-4 sm:p-6 border border-forest-800 shadow-editorial card-hover-editorial flex flex-col justify-between">
             <div className="space-y-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-emerald-300">
                 Partner With Us
@@ -328,7 +328,7 @@ export function TestimonialsSection() {
       className="py-16 sm:py-20 lg:py-24 bg-white border-b border-ivory-border"
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14 space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14 space-y-3 gsap-fade-up">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-900 text-xs font-bold uppercase tracking-widest border border-forest-200">
             <Quote className="w-3.5 h-3.5 text-coral-600" />
             <span>Voices of Hope & Dignity</span>
@@ -345,11 +345,11 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 gsap-card-group">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}
-              className="bg-ivory rounded-3xl p-5 sm:p-7 border border-ivory-border shadow-editorial flex flex-col justify-between hover:shadow-editorial-lg transition-all duration-300"
+              className="bg-ivory rounded-3xl p-5 sm:p-7 border border-ivory-border shadow-editorial card-hover-editorial flex flex-col justify-between hover:shadow-editorial-lg transition-all duration-300"
             >
               <div className="space-y-4">
                 <Quote className="w-7 h-7 sm:w-8 sm:h-8 text-coral-500/40" />
